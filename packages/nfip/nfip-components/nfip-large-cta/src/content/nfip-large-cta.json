@@ -1,0 +1,14 @@
+{   
+    "quote" : {
+        "heading": "Get a Quote Today!",
+        "heading_level": "h2",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "cta": {
+            "link": "#",
+            "link_target": "",
+            "button_label": "Learn more",
+            "button_inverse": false,
+            "id": ""
+        }
+    }
+}

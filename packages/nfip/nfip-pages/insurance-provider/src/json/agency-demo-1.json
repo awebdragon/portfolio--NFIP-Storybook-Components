@@ -1,0 +1,1012 @@
+{
+    "_embedded": {
+      "items": [
+        {
+          "agencyId": 239604,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "8698490947",
+          "address": {
+            "addressId": 239604,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency3ec9a4@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239604,
+            "firstName": "Katalon1a4131",
+            "lastName": "Testerc36386",
+            "email": "test_agentf1d0c7@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "8698490947"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T20:22:29.109224",
+            "endTime": "2025-01-21T20:22:29.924341",
+            "comment": "Your agency certification was certified by Katalon."
+          },
+          "entryDate": "2025-01-21T20:22:29.109071",
+          "updateDate": "2025-01-21T20:22:29.765608",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357687,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T20:22:29.109224",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239604"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239604"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239604"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239604/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239602,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "5138390947",
+          "address": {
+            "addressId": 239602,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency45fc96@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239602,
+            "firstName": "Katalonf80356",
+            "lastName": "Testerab025d",
+            "email": "test_agentc5f59e@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "4138390947"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T20:22:18.463596",
+            "endTime": "2025-01-21T20:22:19.149819",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T20:22:18.46342",
+          "updateDate": "2025-01-21T20:22:19.154666",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357685,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T20:22:18.463596",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239602"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239602"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239602"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239602/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239595,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "9762390947",
+          "address": {
+            "addressId": 239595,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency79d145@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239595,
+            "firstName": "Katalon71e706",
+            "lastName": "Testerba6797",
+            "email": "test_agentca3f23@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "9762390947"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T20:22:12.846201",
+            "endTime": "2025-01-21T20:22:13.20787",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T20:22:12.845937",
+          "updateDate": "2025-01-21T20:22:13.213222",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357676,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T20:22:12.846201",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239595"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239595"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239595"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239595/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239592,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "0259290947",
+          "address": {
+            "addressId": 239592,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency1f6f30@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239592,
+            "firstName": "Katalonbccd15",
+            "lastName": "Tester38b048",
+            "email": "test_agent6f9e9c@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "0259290947"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T20:22:09.695782",
+            "endTime": "2025-01-21T20:22:09.932612",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T20:22:09.695575",
+          "updateDate": "2025-01-21T20:22:09.93917",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357673,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T20:22:09.695782",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239592"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239592"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239592"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239592/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239584,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "7975164847",
+          "address": {
+            "addressId": 239584,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency9809b0@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239584,
+            "firstName": "Katalonecfb55",
+            "lastName": "Testere5a455",
+            "email": "test_agenta6f852@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "6975164847"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T18:36:55.952247",
+            "endTime": "2025-01-21T18:36:56.801917",
+            "comment": "Your agency certification was certified by Katalon."
+          },
+          "entryDate": "2025-01-21T18:36:55.952116",
+          "updateDate": "2025-01-21T18:36:56.643503",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357667,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T18:36:55.952247",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239584"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239584"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239584"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239584/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239582,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "2384064847",
+          "address": {
+            "addressId": 239582,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agencycab5ff@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239582,
+            "firstName": "Katalonc69ec1",
+            "lastName": "Tester4d245f",
+            "email": "test_agent2f0007@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "1384064847"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T18:36:45.002652",
+            "endTime": "2025-01-21T18:36:45.698119",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T18:36:45.002534",
+          "updateDate": "2025-01-21T18:36:45.702665",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357665,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T18:36:45.002652",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239582"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239582"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239582"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239582/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239575,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "9009954847",
+          "address": {
+            "addressId": 239575,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency44f7aa@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239575,
+            "firstName": "Katalone16521",
+            "lastName": "Tester41aab9",
+            "email": "test_agent143e05@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "9009954847"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T18:36:39.187204",
+            "endTime": "2025-01-21T18:36:39.560646",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T18:36:39.187037",
+          "updateDate": "2025-01-21T18:36:39.566061",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357656,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T18:36:39.187204",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239575"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239575"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239575"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239575/action"
+            }
+          }
+        },
+        {
+          "agencyId": 239572,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "5765954847",
+          "address": {
+            "addressId": 239572,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency50e41f@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 239572,
+            "firstName": "Katalon5355e9",
+            "lastName": "Tester1feb0c",
+            "email": "test_agent72d144@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "4765954847"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Approver",
+            "startTime": "2025-01-21T18:36:35.873986",
+            "endTime": "2025-01-21T18:36:36.121023",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T18:36:35.873786",
+          "updateDate": "2025-01-21T18:36:36.127111",
+          "updateUser": "AgentRegistry Approver",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 357653,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T18:36:35.873986",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239572"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239572"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239572"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/239572/action"
+            }
+          }
+        },
+        {
+          "agencyId": 238368,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "8388804347",
+          "address": {
+            "addressId": 238368,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agency503c19@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 238368,
+            "firstName": "Katalon4b0d13",
+            "lastName": "Testere8d7b1",
+            "email": "test_agent8b7b39@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "2388804347"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Admin",
+            "startTime": "2025-01-21T04:34:50.927198",
+            "endTime": "2025-01-21T04:34:52.473639",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T04:34:50.927168",
+          "updateDate": "2025-01-21T04:36:13.151448",
+          "updateUser": "AgentRegistry Admin",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 355848,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T04:34:50.927198",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238368"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238368"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238368"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238368/action"
+            }
+          }
+        },
+        {
+          "agencyId": 238367,
+          "name": "Katalon Automated Public Agency",
+          "agencyNPN": "2074443347",
+          "address": {
+            "addressId": 238367,
+            "addressLineOne": "937 Raymond",
+            "addressLineTwo": null,
+            "cityName": "Crystal Beach",
+            "zipCode": "77650",
+            "zipCodeExtension": null,
+            "state": {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            },
+            "latitude": 29.466043,
+            "longitude": -94.605009,
+            "stateFips": "48",
+            "countyFips": "167"
+          },
+          "states": [
+            {
+              "stateId": 1,
+              "code": "AL",
+              "name": "ALABAMA",
+              "type": "CONTINENT"
+            },
+            {
+              "stateId": 60,
+              "code": "TX",
+              "name": "TEXAS",
+              "type": "CONTINENT"
+            }
+          ],
+          "email": "test_agencyd01320@email.com",
+          "phoneNumber": "1234567890",
+          "agent": {
+            "agentId": 238367,
+            "firstName": "Katalon6990e4",
+            "lastName": "Tester169d20",
+            "email": "test_agent362554@email.com",
+            "phoneNumber": "9897896985",
+            "phoneExt": "15691",
+            "agentNPN": "7864443347"
+          },
+          "status": "ACTIVE",
+          "decision": {
+            "actionBy": "AgentRegistry Admin",
+            "startTime": "2025-01-21T04:24:06.924223",
+            "endTime": "2025-01-21T04:24:08.457536",
+            "comment": "Your agency request was approved by Katalon."
+          },
+          "entryDate": "2025-01-21T04:24:06.9242",
+          "updateDate": "2025-01-21T04:36:04.414893",
+          "updateUser": "AgentRegistry Admin",
+          "spokenLanguages": [
+            {
+              "spokenLanguageId": 355847,
+              "language": "English"
+            }
+          ],
+          "requestTime": "2025-01-21T04:24:06.924223",
+          "affiliatedWyo": {
+            "wyoId": 406,
+            "legalName": "Ackermans Awesome WYO Company",
+            "participating": true,
+            "status": "ACTIVE"
+          },
+          "agencyCode": "1234567890",
+          "needsCertification": false,
+          "certificationDate": "2025-01-21",
+          "nationalProducer": true,
+          "locatorParticipator": true,
+          "firaCertified": true,
+          "_links": {
+            "self": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238367"
+            },
+            "DASHBOARD": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency{?filter}",
+              "templated": true
+            },
+            "GET": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238367"
+            },
+            "UPDATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238367"
+            },
+            "CREATE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency"
+            },
+            "JUDGE": {
+              "href": "https://ar-services/ar-services/ar/api/management/agency/238367/action"
+            }
+          }
+        }
+      ]
+    },
+    "_links": {
+      "first": {
+        "href": "https://ar-services/ar-services/ar/api/management/agency?filter=status%3Din%3D%28ACTIVE%29&page=0&size=10&sort=id,desc"
+      },
+      "self": {
+        "href": "https://ar-services/ar-services/ar/api/management/agency?filter=status%3Din%3D%28ACTIVE%29&page=0&size=10&sort=id,desc"
+      },
+      "nextOld": {
+        "href": "https://ar-services/ar-services/ar/api/management/agency?filter=status%3Din%3D%28ACTIVE%29&page=1&size=10&sort=id,desc"
+      },
+      "next": {
+        "name": "page1"
+      },
+      "lastOld": {
+        "href": "https://ar-services/ar-services/ar/api/management/agency?filter=status%3Din%3D%28ACTIVE%29&page=2214&size=10&sort=id,desc"
+      },
+      "last": {
+        "name": "page2"
+      }
+    },
+    "page": {
+      "size": 10,
+      "totalElements": 22141,
+      "totalPages": 2215,
+      "number": 0
+    }
+  }

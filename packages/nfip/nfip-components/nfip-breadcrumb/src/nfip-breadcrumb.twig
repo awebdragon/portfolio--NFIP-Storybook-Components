@@ -1,0 +1,12 @@
+
+<nav class="usa-breadcrumb{% if modifier %} {{ modifier }}{% endif %}" aria-label="{{ aria_label }}">
+  <ol class="usa-breadcrumb__list">
+    {% for link in breadcrumbs %}
+    <li class="usa-breadcrumb__list-item">
+      <a href="{{ link.url }}" class="usa-breadcrumb__link">
+        <span>{{ link.link_text }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

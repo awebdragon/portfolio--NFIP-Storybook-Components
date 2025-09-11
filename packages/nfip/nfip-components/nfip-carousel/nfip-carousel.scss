@@ -1,0 +1,179 @@
+@use "../../nfip-colors/src/styles" as *;
+@use "../../styles/nfip-utility" as *;
+
+$dotSize: 0.9375rem;
+
+%user-focus {
+  &:not([disabled]):focus {
+    outline: none;
+  }
+
+  &:not([disabled]):focus-visible {
+    outline: 2px solid $theme-color-primary;
+  }
+}
+
+.nfip-carousel {
+  --button: 1.25rem;
+
+  display: grid;
+  grid-template-columns: var(--button) var(--button) auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "slider slider slider"
+    "previous next nav";
+  align-items: center;
+  gap: 1.25rem;
+
+  @include at-media("tablet-lg") {
+    --button: 2.022rem;
+    grid-template-columns: var(--button) auto var(--button);
+    grid-template-areas:
+      "previous slider next"
+      "nav nav empty";
+    align-items: stretch;
+    gap: 0;
+
+    &.nav-center {
+      --w: calc((100% - (var(--button) * 2)) * 0.41667 + 0.625rem);
+      grid-template-columns: var(--button) var(--w) auto var(--button);
+      grid-template-areas:
+        "previous slider slider next"
+        "empty empty nav emptytwo";
+    }
+  }
+
+  @include at-media("widescreen") {
+    width: calc(100% + var(--button) + var(--button));
+    margin-left: calc(var(--button) * -1);
+  }
+
+  &__slider {
+    overflow: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    grid-area: slider;
+    gap: 0.625rem;
+    > div {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+    }
+  }
+
+  &__controlgroup {
+    display: contents;
+  }
+
+  &__controls {
+    width: var(--button);
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+
+    @extend %user-focus;
+
+    &:disabled {
+      opacity: 0.25;
+      cursor: auto;
+    }
+
+    &:after {
+      content: "";
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.0236 32.0672"><path d="M2.0555.3577l14.6221,14.831c.4614.468.4614,1.2215,0,1.6895L2.0555,31.7092c-.4664.474-1.2272.477-1.6986.011-.4715-.467-.4765-1.2276-.011-1.7005l13.7882-13.9862L.3459,2.0473c-.4654-.473-.4604-1.2336.011-1.7005.2342-.2315.5385-.3467.8438-.3467.3103,0,.6196.1192.8548.3577Z"/></svg>');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      object-fit: contain;
+      background-position: center;
+      width: 100%;
+      aspect-ratio: 17 /32;
+      display: block;
+
+      @include at-media("tablet-lg") {
+        width: 50%;
+      }
+    }
+
+    // svg {
+    //   width: var(--button);
+    //   height: calc(var(--button) * 1.833);
+    // }
+
+    &.prev {
+      grid-area: previous;
+      justify-content: flex-start;
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.next {
+      grid-area: next;
+      justify-content: flex-end;
+    }
+  }
+
+  &__navigation {
+    grid-area: nav;
+    gap: $dotSize * 0.2667;
+
+    button {
+      width: $dotSize;
+      height: $dotSize;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      position: relative;
+      padding: 0;
+      @extend %user-focus;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid $theme-color-base-darkest;
+        background-color: transparent;
+        border-radius: 50%;
+        display: block;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        &::after {
+          background-color: $theme-color-base-darkest;
+        }
+      }
+
+      &.active {
+        &:after {
+          width: 100%;
+          height: 100%;
+          background-color: $theme-color-base-darkest;
+        }
+      }
+    }
+  }
+
+  .text-indent-neg-2 {
+    &,
+    & ~ * {
+      padding: 0 1.6rem;
+      @include at-media("tablet-lg") {
+        padding: 0;
+      }
+    }
+  }
+}

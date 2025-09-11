@@ -1,0 +1,20 @@
+@use "../../nfip-colors/src/styles" as *;
+@use "../../styles/nfip-utility" as *;
+
+.usa-table.nfip-table {
+  th,
+  td {
+    // border-right: 0;
+    // border-left: 0;
+    // border-top: 0;
+    border-color: $theme-color-base-lighter;
+  }
+
+  thead th {
+    border-bottom: 0;
+    background-color: $theme-color-primary;
+    border-color: $theme-color-accent-cool-lightest;
+    color: #ffffff;
+    padding: 1rem;
+  }
+}

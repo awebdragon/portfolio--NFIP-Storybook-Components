@@ -1,0 +1,77 @@
+@use "sass:math";
+
+@use "uswds-core" as *;
+
+$stat-card-bg-blue: #005288;
+$stat-card-bg-lightblue: #0078AE;
+$stat-card-bg-lightblue-tint: #B9D9E8;
+$stat-card-bg-green-tint: #d2e2c6;
+$stat-card-bg-darkgray: #2F2F30;
+
+$stat-card-text-light: #fff;
+$stat-card-text-dark: #000;
+
+$stat-block-header-font-size: 70px;
+
+@mixin stat-card-button($font-color) {
+    color: $font-color;
+    box-shadow: inset 0 0 0 2px $font-color;
+}
+
+@mixin stat-card-theme($font-color, $background-color) {
+    color: $font-color;
+    background-color: $background-color;
+}
+
+
+.stat-card__container{
+    @include u-border(0, 'transparent');
+    @include u-radius(0);
+
+    min-height: 230px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .usa-card__heading{
+        font-size: $stat-block-header-font-size;
+    }
+}
+
+.stat-card-theme-blue{
+  @include stat-card-theme ($stat-card-text-light, $stat-card-bg-blue);
+  button{
+    @include stat-card-button ($stat-card-text-light);
+  }
+}
+
+.stat-card-theme-lightblue{
+  @include stat-card-theme ($stat-card-text-light, $stat-card-bg-lightblue);
+  button{
+    @include stat-card-button ($stat-card-text-light);
+  }
+}
+
+.stat-card-theme-darkgray{
+  @include stat-card-theme ($stat-card-text-light, $stat-card-bg-darkgray);
+  button{
+    @include stat-card-button ($stat-card-text-light);
+  }
+}
+
+.stat-card-theme-lightblue-tint{
+  @include stat-card-theme ($stat-card-text-dark, $stat-card-bg-lightblue-tint);
+  button{
+    @include stat-card-button ($stat-card-text-dark);
+  }
+}
+
+.stat-card-theme-green-tint{
+  @include stat-card-theme ($stat-card-text-dark, $stat-card-bg-green-tint);
+
+  button{
+    @include stat-card-button ($stat-card-text-dark);
+  }
+}

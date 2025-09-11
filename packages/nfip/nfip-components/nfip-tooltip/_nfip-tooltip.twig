@@ -1,0 +1,17 @@
+{% embed '@nfip-components/nfip-section/nfip-section.twig' %}
+  {% block sectionContent %}
+    <h2>Tooltips</h2>
+    <p class="intro">This is a demo of the Tooltip component. This version uses the USWDS Tooltip component, which is styled for NFIP.</p>
+
+    <p>Vestibulum dapibus nunc ac augue. Sed in libero ut nibh placerat accumsan. Phasellus volutpat, metus eget egestas mollis, 
+    lacus lacus blandit dui, id egestas quam mauris ut lacus. Cras varius. Donec interdum, metus et hendrerit aliquet, dolor diam 
+    sagittis ligula, eget egestas libero turpis vel mi.
+    {% include '@nfip-components/nfip-tooltip/nfip-tooltip.twig' with {
+      tooltipTrigger: 'More Info',
+      tooltipText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, vero quaerat?'
+    }
+    %}
+    Curabitur at lacus ac velit ornare lobortis. Donec mollis hendrerit risus.
+    Curabitur suscipit suscipit tellus. Vestibulum fringilla pede sit amet augue. Vestibulum fringilla pede sit amet augue.</p>
+  {% endblock %}
+{% endembed %}

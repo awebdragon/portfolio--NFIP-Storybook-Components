@@ -1,0 +1,11 @@
+{
+  "lang": "en",
+  "img_path": "./img",
+  "cta": {
+    "title": "Find an insurance agent to get protected!",
+    "link": "#",
+    "button_label": "Learn more",
+    "button_inverse": true,
+    "button_id": "buttonID"
+  }
+}

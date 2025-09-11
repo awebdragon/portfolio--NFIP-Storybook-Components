@@ -1,0 +1,11 @@
+{% embed '@nfip-components/nfip-section/nfip-section.twig' with { containerWidth: 'desktop-lg'} %}
+  {% block sectionContent %}
+    {% include '@nfip-components/nfip-breadcrumb/src/nfip-breadcrumb.twig' %}
+  {% endblock %}
+{% endembed %}
+
+{% embed '@nfip-components/nfip-section/nfip-section.twig' with { containerWidth: 'desktop-lg', backgroundColor: 'primary-darker' } %}
+  {% block sectionContent %}
+    {% include '@nfip-components/nfip-breadcrumb/src/nfip-breadcrumb.twig' %}
+  {% endblock %}
+{% endembed %}

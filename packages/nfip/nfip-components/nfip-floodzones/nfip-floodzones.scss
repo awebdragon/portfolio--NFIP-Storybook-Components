@@ -1,0 +1,189 @@
+@use "uswds-core" as *;
+@use "../../packages/nfip/nfip-colors/src/styles" as *;
+@use "../../styles/nfip-utility" as *;
+
+$md: "(min-width: 800px)";
+.nfip-floodzones img {
+  display: block;
+  width: 100%;
+}
+
+.nfip-floodzones {
+  border: 2px solid #ffffff;
+  [role="tablist"] {
+    @include at-media(tablet) {
+      width: 23%;
+      flex: 0 0 23%;
+      border-right: 2px solid #ffffff;
+    }
+    @media screen and #{$md} {
+      width: 26%;
+      flex: 0 0 26%;
+    }
+    @include at-media(desktop) {
+      width: 25%;
+      flex: 0 0 25%;
+    }
+
+    h2.nfip-tabs-tab-heading{
+      @include nfip-h2;
+    }
+    h3.nfip-tabs-tab-heading{
+      @include nfip-h3;
+    }
+    h4.nfip-tabs-tab-heading{
+      @include nfip-h4;
+    }
+    h5.nfip-tabs-tab-heading{
+      @include nfip-h5;
+    }
+
+    .nfip-tabs-tab-heading {
+      flex-grow: 1;
+      flex-basis: 0;
+      border: 0;
+      border-bottom: 0!important;
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0);
+
+      &[aria-selected="true"] {
+        font-weight: 700;
+        text-decoration-color: currentColor;
+      }
+
+      &:nth-child(1) {
+        background-color: #002231;
+      }
+      &:nth-child(2) {
+        background-color: #012b46;
+      }
+      &:nth-child(3) {
+        background-color: #003d67;
+      }
+      &:nth-child(4) {
+        background-color: #005288;
+      }
+      &:nth-child(5) {
+        background-color: #3d7ca5;
+      }
+
+      &:hover {
+        background-color: #b9d9e8;
+        color: $theme-color-base-darkest;
+      }
+
+      button{ // fix for heading levels
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+
+        &:hover{
+          color: $theme-color-base-darkest;
+        }
+      }
+    }
+  }
+
+  .nfip-tabs-tabcontent {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      color: #fff;
+    }
+
+    --opacity: 1;
+    background-color: rgba(0, 43, 70, var(--opacity));
+    color: #ffffff;
+    line-height: 1.4em;
+    padding: 24px 33px;
+
+    @include at-media(tablet) {
+      --opacity: 0.9;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 8px 20px;
+    }
+
+    @include at-media(desktop-lg) {
+      padding: 26px 50px;
+    }
+
+    a {
+      color: #ffffff;
+      font-weight: 700;
+    }
+  }
+
+  .nfip-tabs-tabpanel {
+    position: relative;
+
+    @include at-media(tablet) {
+      width: 77%;
+      flex: 0 0 77%;
+    }
+
+    @media screen and #{$md} {
+      width: 74%;
+      flex: 0 0 74%;
+    }
+    @include at-media(desktop) {
+      width: 75%;
+      flex: 0 0 75%;
+    }
+
+    &:nth-child(3) .nfip-tabs-tabcontent {
+      background-color: rgba(0, 43, 70, var(--opacity));
+    }
+    &:nth-child(4) .nfip-tabs-tabcontent {
+      background-color: rgba(1, 43, 70, var(--opacity));
+    }
+    &:nth-child(5) .nfip-tabs-tabcontent {
+      background-color: rgba(0, 61, 103, var(--opacity));
+    }
+    &:nth-child(6) .nfip-tabs-tabcontent {
+      background-color: rgba(0, 82, 136, var(--opacity));
+    }
+    &:nth-child(7) .nfip-tabs-tabcontent {
+      background-color: rgba(61, 124, 165, var(--opacity));
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 1023px) {
+      min-height: 480px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .nfip-tabs-mobile {
+    background-color: #002231;
+    transition: all 0.3s;
+    padding: 20px;
+  }
+
+  &.active-0 .nfip-tabs-mobile {
+    background-color: #002231;
+  }
+  &.active-1 .nfip-tabs-mobile {
+    background-color: #012b46;
+  }
+  &.active-2 .nfip-tabs-mobile {
+    background-color: #003d67;
+  }
+  &.active-3 .nfip-tabs-mobile {
+    background-color: #005288;
+  }
+  &.active-4 .nfip-tabs-mobile {
+    background-color: #3d7ca5;
+  }
+}

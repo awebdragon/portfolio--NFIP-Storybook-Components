@@ -1,0 +1,31 @@
+{% if twocolumn.column_content.cta.button_inverse == true %}
+    {% set button_style = 'inverse' %}
+{% else %}
+    {% set button_style = 'normal' %}
+{% endif %}
+
+<section class="{{ twocolumn.container_class }}">
+  <div class="usa-section grid-container maxw-{{ containerWidth }}">
+    <div class="grid-row grid-gap">
+    <div class="{{ twocolumn.column1_classes }}">
+        <{{ twocolumn.column_content.heading_level }} class="margin-top-1 tablet:margin-top-0 font-family-sans">{{ twocolumn.column_content.heading}}</{{ twocolumn.column_content.heading_level }}>
+
+        <p class="font-family-sans nfip-body-text">{{ twocolumn.column_content.text}}</p>
+
+        {# <a href="{{ twocolumn.column_content.cta.link }}" id="{{ twocolumn.column_content.cta.id }}" class="nfip-button nfip-button--default">{{ twocolumn.column_content.cta.button_label}}</a> #}
+        {% include '@nfip-components/nfip-button/src/_button.twig' with {
+          'button_type': 'default',
+          'button_markup': 'link',
+          'button_text': twocolumn.column_content.cta.button_label,
+          'button_url': twocolumn.column_content.cta.link,
+          'button_target': '_self',
+          'button_id': twocolumn.column_content.cta.id,
+          'button_style': button_style,
+        } %}
+    </div>
+    <div class="{{ twocolumn.column2_classes }}">
+        {{ twocolumn.column_media }}
+    </div>
+    </div>
+  </div>
+</section>

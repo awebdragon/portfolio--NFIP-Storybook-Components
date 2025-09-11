@@ -1,0 +1,160 @@
+@use "../../../nfip-colors/src/styles" as *;
+@use "../../../styles/nfip-utility" as *;
+@use "uswds-core" as *;
+
+.usa-banner__header{
+  padding: 1rem 0;
+}
+
+.language-switcher-banner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+  margin: 0;
+  margin-top:1rem;
+  padding-right: 1rem;
+
+  @include at-media(tablet){
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+.usa-header {
+  background-color: #fff;
+  z-index: 100;
+
+  .usa-logo {
+    &__text {
+      img {
+        display: block;
+        width: 21.4rem;
+        height: 3.5rem;
+
+        @include at-media(desktop) {
+          width: 34.3rem;
+          height: 5.6rem;
+        }
+      }
+    }
+  }
+
+  .usa-nav{
+    background-color: $theme-color-primary;
+  }
+
+  .usa-nav__primary{
+
+    li{
+      color: #fff;
+
+      button{
+        color: #fff;
+
+        span{
+          &::after{
+            background-color: #fff;
+          }
+        }
+
+        &:hover{
+          span{
+            &::after{
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .usa-nav__submenu{
+      background-color: $theme-color-accent-cool;
+    }
+
+    .usa-nav__link:hover,
+    .usa-current{
+      &::after{
+        background-color: $theme-color-accent-cool-lighter !important;
+      }
+    }
+
+    .usa-nav__link[aria-expanded="true"]{
+      background-color: transparent;
+    }
+
+    .usa-nav__link[aria-expanded="true"],
+    .usa-nav__link[aria-expanded="true"]:hover{
+      &::after{
+        background-color: $theme-color-accent-cool-lighter;
+        border-radius: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        height: .4rem;
+        left: 1.6rem;
+        right: 1.6rem;
+        bottom: 0;
+      }
+    }
+  }
+  .usa-nav__secondary{
+    .usa-nav__secondary-links{
+      a{
+        color: $theme-color-base-darker;
+      }
+    }
+  }
+
+  // mobile menu
+  .usa-nav.is-visible{
+    background-color: #fff;
+
+    .usa-nav__primary{
+      li{
+        color: $theme-color-base-darkest;
+
+        button{
+          color: $theme-color-base-darkest;
+
+          span{
+            &:after{
+              background-color: $theme-color-base-darkest;
+              background-image: url(/dist/img/usa-icons/expand_more.svg);
+              mask-image: url(/dist/img/usa-icons/expand_more.svg), linear-gradient(transparent, transparent);
+            }
+          }
+        }
+      }
+
+      button[aria-expanded="true"]{
+        span{
+          &:after{
+            background-color: $theme-color-base-darkest;
+            background-image: url(/dist/img/usa-icons/expand_less.svg);
+            mask-image: url(/dist/img/usa-icons/expand_less.svg), linear-gradient(transparent, transparent);
+          }
+        }
+      }
+
+      .usa-nav__link:hover,
+      .usa-current{
+        &::after{
+          background-color: transparent !important;
+        }
+      }
+
+      .usa-nav__link[aria-expanded="true"],
+      .usa-nav__link[aria-expanded="true"]:hover{
+        &::after{
+          background-color: transparent;
+        }
+      }
+
+      .usa-nav__submenu{
+        background-color: #fff;
+      }
+    }
+  }
+}
+

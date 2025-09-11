@@ -1,0 +1,128 @@
+{% embed "@nfip-templates/_nfip-default.twig" with { 'lang': 'en' } %}
+  {% block main %}
+  {% include '@nfip-components/nfip-hero/nfip-hero.twig' %}
+
+  {% set backgroundColor = 'white' %}
+  {% embed '@nfip-components/nfip-section/nfip-section.twig' with {  paddingTop: 3,paddingBottom: 2 } %}
+    {% block sectionContent %}
+    <div class="grid-row">
+    <div class="desktop:grid-col-10 desktop:grid-offset-1">
+    <h2>A Basic Section Component</h2>
+    <p class="intro font-sans-8 font-semibold">Lorem ipsum dolor sit amet consectetur. Non metus integer enim sed. Integer amet sit commodo orci. Lorem at non pellentesque felis. Mattis donec commodo sodales nisl. Sem neque sed pharetra vulputate tellus consectetur massa in porta. Tincidunt quam egestas et sit ridiculus magna enim fringilla egestas.</p>
+    <p><a href="#">Sed purus fermentum</a> turpis laoreet nibh. Posuere iaculis feugiat sed bibendum vel gravida maecenas quisque orci. Non et odio id eu. Maecenas mauris commodo venenatis risus nisi cum iaculis faucibus a. Malesuada at lorem habitasse proin eu bibendum lectus. Sed nulla dictum a magna. Massa neque elit ac duis quis viverra fames odio. Non metus integer enim sed. Integer amet sit commodo orci. Lorem at non pellentesque felis. Mattis donec commodo sodales nisl. Sem neque sed pharetra vulputate tellus consectetur massa in porta. Tincidunt quam egestas et sit ridiculus magna enim fringilla egestas.</p>
+    <p>Sed purus fermentum turpis laoreet nibh. Posuere iaculis feugiat sed bibendum vel gravida maecenas quisque orci. Non et odio id eu. Maecenas mauris commodo venenatis risus nisia. Malesuada at lorem habitasse proin eu bibendum lectus. Sed nulla dictum a magna. Massa neque elit ac duis quis viverra fames odio. Velit dui suscipit quis donec placerat. Sapien pharetra curabitur nibh purus.</p>
+
+    {% embed '@nfip-components/nfip-summary-box/src/nfip-summary-box.twig' %}
+      {% block summaryBody %}
+      {{summary_body}}
+      {% include '@nfip-components/nfip-button/src/_button.twig' with {
+        'button_type': 'default',
+        'button_markup': 'link',
+        'button_text': summary_cta.link_text,
+        'button_url': summary_cta.url,
+        'button_target': '_self',
+        'button_style': 'normal'
+      } %}
+      </div>
+      {% endblock %}
+      {% endembed %}
+
+    </div>
+    </div>
+    {% endblock %}
+  {% endembed %}
+
+  {% embed '@nfip-components/nfip-section/nfip-section.twig' with { paddingTop: 0, paddingBottom: 0 } %}
+    {% block sectionContent %}
+    <div class="grid-row">
+    <div class="desktop:grid-col-10 desktop:grid-offset-1">
+    <img src="https://picsum.photos/470/320" class="float-right margin-left-2" style="width:50%;">
+    <p>Lorem ipsum dolor sit amet consectetur. Non metus integer enim sed. Integer amet sit commodo orci. Lorem at non pellentesque felis. Mattis donec commodo sodales nisl. Sem neque sed pharetra vulputate tellus consectetur massa in porta. Tincidunt quam egestas et sit ridiculus magna enim fringilla egestas.</p>
+    <p>Sed purus fermentum turpis laoreet nibh. Posuere iaculis feugiat sed bibendum vel gravida maecenas quisque orci. Non et odio id eu. Maecenas mauris commodo venenatis risus nisi Massa neque elit ac duis quis viverra fames odio. Velit dui suscipit quis Posuere iaculis feugiat sed bibendum vel gravida maecenas quisque orci.donec placerat. Sapien pharetra curabitur nibh purus.Lorem ipsum dolor sit amet consectetur. </p>
+    </div></div>
+    {% endblock %}
+  {% endembed %}
+
+
+  {% embed '@nfip-components/nfip-section/nfip-section.twig' %}
+    {% block sectionContent %}
+    {% embed '@nfip-components/nfip-carousel/nfip-carousel.twig' with { options: quoteOptions, carousel_aria_name: "Quote Carousel", nav_position: nav_position } %}
+      {% block carouselSlides %}
+        {% for quote in quotes %}
+          <div data-slide-number="{{ loop.index }}" tabindex="0" role="group" aria-roledescription="slide">
+          {% include '@nfip-components/nfip-quote/src/nfip-quote.twig' with quote %}
+          </div>
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+    {% endblock %}
+  {% endembed %}
+
+  {% embed '@nfip-components/nfip-section/nfip-section.twig' %}
+    {% block sectionContent %}
+      {% include '@nfip-components/nfip-quote/src/nfip-quote.twig' with {
+        quote: quotes.0.quote,
+        name: quotes.0.name,
+        quote_title: quotes.0.quote_title
+      } %}
+    {% endblock %}
+  {% endembed %}
+
+  {% embed '@nfip-components/nfip-section/nfip-section.twig' %}
+    {% block sectionContent %}
+    <div class="usa-table-container--scrollable" tabindex="0">
+    
+      <table class="usa-table nfip-table width-full">
+        <caption>Table Title</caption>
+        {{table}}
+      </table>
+    </div>
+    {% endblock %}
+  {% endembed %}
+
+  {% embed '@nfip-components/nfip-section/nfip-section.twig' with { containerWidth: 'desktop', options: { show_nav: true } } %}
+    {% block sectionContent %}
+    {% embed '@nfip-components/nfip-carousel/nfip-carousel.twig' with { options: options, carousel_aria_name: "Quote Carousel", nav_position: nav_position } %}
+      {% block carouselSlides %}
+        {% for image in images %}
+        <div data-slide-number="{{ loop.index }}" tabindex="0" role="group" aria-roledescription="slide">
+        {% include '@nfip-components/nfip-image/nfip-image.twig' with {
+          image: image.image,
+          image_alt: image.image_alt,
+          caption: image.caption
+        } %}
+        </div>
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+    {% endblock %}
+  {% endembed %}
+
+  <h2 class="text-center margin-bottom-6">Check out the latest resources</h2>
+  {% include '@nfip-components/nfip-cards/nfip-cards.twig' with {
+    default_classes: resource_classes,
+    cards: resource_cards,
+    tag: 'h5'
+  } %}
+  {# {% embed '@nfip-components/nfip-section/nfip-section.twig' with { paddingTop: 0 } %}
+    {% block sectionContent %}
+      <p>This is a <button type="button" class="usa-button usa-tooltip" data-position="bottom" title="Sed fringilla mauris sit amet nibh. Nam adipiscing. Nam pretium turpis et arcu. Etiam vitae tortor.">tooltip</button> tooltip button</p>
+      <div class="padding-8">
+        <div class="margin-4">
+          <button type="button" class="usa-button usa-tooltip" data-position="top" title="Top">Show on top</button>
+        </div>
+        <div class="margin-4">
+          <button type="button" class="usa-button usa-tooltip" data-position="right" title="Right">Show on right</button>
+        </div>
+        <div class="margin-4">
+          <button type="button" class="usa-button usa-tooltip" data-position="left" title="Left">Show on left</button>
+        </div>
+        <div class="margin-4">
+          <button type="button" class="usa-button usa-tooltip" data-position="bottom" title="Bottom">Show on bottom</button>
+        </div>
+      </div>
+    {% endblock %}
+  {% endembed %} #}
+  {% endblock %}
+{% endembed %}

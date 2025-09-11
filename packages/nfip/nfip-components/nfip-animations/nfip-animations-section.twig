@@ -1,0 +1,1466 @@
+<div class="grid-container margin-bottom-6">
+  <h1>Animations - Sections and Parallax</h1>
+
+  <p><strong>Please refresh the page one time.</strong></p>
+
+  <p>This page demonstrates animations that are applied to sections of content, and therefore can't be a single class name applied to any element. However, they should still work as reusable paragraph types. The content editor can add any of these to the campaign page in any order.</p>
+
+  <p><strong>Most content will likely be custom HTML inside a CKEditor field.</strong> This would give us access to set the .grid-container to be any width we'd like, as well as adding theme or USWDS classes where necessary. This will make creating/editing these paragraphs more difficult for non-developers, however, so it might be a good idea to see if we can add the 1/2/3 columns paragraphs as options as well. That would likely increase development time, but could be a feature we plan for the future.</p>
+</div>
+
+<div class="grid-col-12 mobile-lg:grid-col-6 desktop:grid-col-3 position-sticky bg-white top-2 left-2 z-top">
+  <p class="padding-x-2 padding-y-1 margin-bottom-0">Jump to:</p>
+  <nav aria-label="Side navigation">
+    <ul class="usa-sidenav">
+      <li class="usa-sidenav__item">
+        <a href="#video">Video Background</a>
+      </li>
+      <li class="usa-sidenav__item">
+        <a href="#slide-up-bottom">Parallax: Slide Up Bottom</a>
+      </li>
+      <li class="usa-sidenav__item">
+        <a href="#background-zoom">Parallax: Background Zoom</a>
+      </li>
+      <li class="usa-sidenav__item">
+        <a href="#background-fall-away">Parallax: Background Fall Away</a>
+      </li>
+      <li class="usa-sidenav__item">
+        <a href="#fixed-fiftyfifty">Fixed 50/50 Media</a>
+      </li>
+      <li class="usa-sidenav__item">
+        <a href="#alternating-fixed">Alternating Fixed 50/50 Media</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>
+
+<div id="video" class="grid-container margin-top-10">
+  <h2>Video Background</h2>
+
+  <p>This isn't a custom made animation, but could solve a lot of creative needs without requiring the creation of a custom animation. The capability to add a background video in Layout Builder is currently not sufficient or usable, so we need to fix that or create an alternative solution.</p>
+  
+  <p>Editors can use any remote or local video file from the media library.</p>
+
+  <p>Editors should be able to toggle an overlay on and off. There should be an additional option to make this overlay a light or dark version. <strong>Caution:</strong> having no overlay and putting text on top of a video puts the onus on designers and content managers to ensure proper contrast and readability.</p>
+
+  <p>Text should separately be light/dark toggle-able. An easier way to merge both concepts may be to have a select field for light or dark content, and then a single checkbox for the overlay, since the dark overlay will always use light content, and the light overlay will always use dark content.</p>
+
+  <p>Editors should also have the option of uploading an SVG or PNG to use as a kind of mask on top of the video. Note: uploading an image with no transparency spots just hides the video - don't do that.</p>
+
+  <p>The video needs to loop, be muted, and include a pause button.</p>
+</div>
+
+<div class="grid-container margin-top-4">
+  <p>Example - Video without overlay or mask, light content</p>
+</div>
+<div class="flsm-video-bg usa-dark-background">
+  <div class="flsm-video-bg-mask padding-y-10">
+    <video class="flsm-video-bg-video" autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2018/07/04/17075-278405107_large.mp4" type="video/mp4">
+    </video>
+    <button class="video-bg-pause"><span>Pause</span></button>
+  
+    <div class="flsm-video-bg-content">
+        <div class="grid-container">
+          <h2>Lorem Ipsum</h2>
+          <p>Paragraph content goes here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-5">
+  <p>Example - Video without overlay or mask, dark content</p>
+</div>
+<div class="flsm-video-bg">
+  <div class="flsm-video-bg-mask padding-y-10">
+    <video class="flsm-video-bg-video" autoplay muted loop>
+      <source src="https://media.istockphoto.com/id/2162843787/video/white-wave-lines-abstract-draped-background.mp4?s=mp4-640x640-is&k=20&c=Spa0vBAe9QYOpHJ1Sml3F6g3v0x432Vs6pmJ97WXZ5U=" type="video/mp4">
+    </video>
+    <button class="video-bg-pause"><span>Pause</span></button>
+  
+    <div class="flsm-video-bg-content">
+        <div class="grid-container">
+          <h2>Lorem Ipsum</h2>
+          <p>Paragraph content goes here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-5">
+<p>Example - Video with dark overlay</p>
+</div>
+<div class="flsm-video-bg --dark usa-dark-background">
+  <div class="flsm-video-bg-mask padding-y-10">
+    <video class="flsm-video-bg-video" autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2023/10/21/185947-876963225_large.mp4" type="video/mp4">
+    </video>
+    <button class="video-bg-pause"><span>Pause</span></button>
+  
+    <div class="flsm-video-bg-content">
+        <div class="grid-container">
+          <h2>Lorem Ipsum</h2>
+          <p>Paragraph content goes here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-5">
+<p>Example - Video with light overlay</p>
+</div>
+<div class="flsm-video-bg --light">
+  <div class="flsm-video-bg-mask">
+    <div class="flsm-video-bg-overlay padding-y-10">
+      <video class="flsm-video-bg-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2025/05/13/278750_large.mp4" type="video/mp4">
+      </video>
+      <button class="video-bg-pause"><span>Pause</span></button>
+    
+      <div class="flsm-video-bg-content">
+          <div class="grid-container">
+            <h2>Lorem Ipsum</h2>
+            <p>Paragraph content goes here.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-5">
+<p>Example - Video with mask</p>
+</div>
+<div class="flsm-video-bg">
+  <div class="flsm-video-bg-mask padding-y-10" style="
+    background: url('./img/nfip/nfip-components/video-mask-example-light.png') no-repeat center center / cover;
+  ">
+    <video class="flsm-video-bg-video" autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2023/10/21/185947-876963225_large.mp4" type="video/mp4">
+    </video>
+    <button class="video-bg-pause"><span>Pause</span></button>
+  
+    <div class="flsm-video-bg-content">
+        <div class="grid-container">
+          <h2>Lorem Ipsum</h2>
+          <p>Paragraph content goes here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-5">
+<p>Example - Video with mask and dark overlay</p>
+</div>
+<div class="flsm-video-bg --dark usa-dark-background">
+  <div class="flsm-video-bg-mask padding-y-10"  style="
+    background: url('./img/nfip/nfip-components/video-mask-example.png') no-repeat center center / cover;
+  ">
+    <video class="flsm-video-bg-video" autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2023/10/21/185947-876963225_large.mp4" type="video/mp4">
+    </video>
+    <button class="video-bg-pause"><span>Pause</span></button>
+  
+    <div class="flsm-video-bg-content">
+        <div class="grid-container">
+          <h2>Lorem Ipsum</h2>
+          <p>Paragraph content goes here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-5">
+<p>Example - Video with mask and light overlay</p>
+</div>
+<div class="flsm-video-bg --light">
+  <div class="flsm-video-bg-mask padding-y-10"  style="
+    background: url('./img/nfip/nfip-components/video-mask-example-light.png') no-repeat center center / cover;
+  ">
+    <video class="flsm-video-bg-video" autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2023/10/21/185947-876963225_large.mp4" type="video/mp4">
+    </video>
+    <button class="video-bg-pause"><span>Pause</span></button>
+  
+    <div class="flsm-video-bg-content">
+        <div class="grid-container">
+          <h2>Lorem Ipsum</h2>
+          <p>Paragraph content goes here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates qui numquam eligendi, earum eos. Omnis nisi nemo, perferendis aspernatur corporis debitis aperiam! Vitae a laudantium impedit minus. Culpa, minima?</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-4 margin-bottom-10">
+  <p>HTML example:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">&lt;div class=&quot;flsm-video-bg {--light/dark}&quot; {style=&quot;
+    background: url(&apos;&apos;) no-repeat center center / cover;
+  &quot;}&gt;
+  &lt;div class=&quot;flsm-video-bg-mask {user added class names | default: padding-y-10}&quot;&gt;
+    &lt;video class=&quot;flsm-video-bg-video&quot; autoplay muted loop&gt;
+      &lt;source src=&quot;&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt;
+    &lt;button class=&quot;video-bg-pause&quot;&gt;&lt;span&gt;Pause&lt;/span&gt;&lt;/button&gt;
+  
+    &lt;div class=&quot;flsm-video-bg-content&quot;&gt;
+      paragraphs/content
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </code>
+
+  <p>SCSS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">.flsm-video-bg{
+  position: relative;
+  overflow: hidden;
+
+  video.flsm-video-bg-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the video */
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Puts the video behind other content */
+  }
+
+  &.usa-dark-background{
+    background: transparent; /* resets usa-dark-background to only affect the content color if no overlay is selected */
+  }
+  &.--dark{
+    background: rgba($theme-color-primary-dark, .685);
+
+    .flsm-video-bg-container{
+      background: $theme-color-primary-darker;
+    }
+  }
+  &.--light{
+    background: rgba(255, 255, 255, .45);
+
+    .flsm-video-bg-container{
+      background: $theme-color-base;
+    }
+  }
+}</pre>
+  </code>
+
+  <p>JS (pause button):</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">const videoContainers = document.querySelectorAll(".flsm-video-bg");
+
+  videoContainers.forEach( (container) => {
+    const video = container.querySelector(".flsm-video-bg-video");
+    const button = container.querySelector(".video-bg-pause");
+    const buttonText = button.querySelector("span");
+
+    button.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        buttonText.textContent = "Pause"
+      } else {
+        video.pause();
+        buttonText.textContent = "Play"
+      }
+      button.classList.toggle("paused");
+    });
+  } );</pre>
+  </code>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>
+
+<div id="slide-up-bottom" class="grid-container margin-top-10">
+  <h2>Parallax: Slide Up Bottom</h2>
+  <p>This is a set of two sub-sections. The first gets pinned as soon as the second scrolls into view, giving the effect of the second sub-section taking over the first.</p>
+
+  <p>Users have the option of toggling whether the image has a scaling animation, from 0 to full size, before the second sub-section scrolls into view.</p>
+
+  <p>Users can select any image file to use. If animated gifs are used, and they repeat or last longer than 5 seconds, we'll need a way to toggle a pause button on or off. This means being able to upload a secondary static image for the pause state. The code below assumes a checkbox field will be added to the editor so the user can indicate that their file is animated, rather than a long complicated script checking for .gif or .svg file types. This checkbox would then reveal the button on the front end, and the second image file upload field in the editor.</p>
+
+  <p>Users can also set the background color of either section. This is probably easiest by using a couple of custom class text fields (the code example shows where these custom classes would be put)</p>
+
+  <p>Below is an example of how it works.</p>
+
+  <p>Scaling animation toggled on:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--slide-up-bottom --animate-image-scale position-relative">
+
+  <div class="flsm-parallax--slide-up-bottom--pin z-bottom bg-base-lightest padding-top-10">
+    <div class="pin-child">
+
+      <div class="grid-container">
+        <h3>The Parallax Effect Sub-Section</h3>
+  
+        <p>This is the first sub-section, required to make the pinning effect of the animation work.</p>
+  
+        <p>This section remains pinned until the bottom of it reaches the bottom of the second sub-section. It's a good idea to put enough content in here to make it fill the viewport before it gets pinned to the bottom of the screen, and to make the second sub-section a little taller as well so the parallax effect lasts longer. We can do this with content, or by adding spacer elements to add empty space.</p>
+  
+        <p>Use an .svg for the animated graphic for best appearance. The graphic container is a set pixel height, which determines how quickly the graphic scales. The graphic itself can be any size or shape, but be mindful how much space it will take up when it's the full screen width. The image will retain its aspect ratio while it scales.</p>
+  
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora architecto doloremque molestias quam, voluptas accusamus dolor perspiciatis totam ab consequuntur nostrum pariatur consectetur vero, ex ipsum libero aperiam. Sint, facere.</p>
+  
+        <div class="height-card-lg add-aspect-4x3 bg-base"></div>
+  
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat magni repellendus distinctio ducimus deserunt ab, dolor velit rem asperiores qui excepturi a blanditiis tempore, iusto inventore assumenda quisquam deleniti omnis.</p>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt excepturi quo velit dolor eveniet doloribus fugit maiores nostrum voluptate unde labore, laudantium adipisci necessitatibus et, delectus ratione blanditiis iure!</p>
+      </div>
+
+      <div class="takeover-spacer height-card"></div>
+
+    </div>
+  </div>
+
+  <div class="flsm-parallax--slide-up-bottom--takeover-container position-relative overflow-visible">
+  
+    <div class="flsm-parallax--slide-up-bottom--topper height-mobile display-flex flex-column flex-justify-end flex-align-center">
+      <img aria-hidden="true" class="display-block width-full overflow-visible" src="./img/nfip/nfip-components/blobby-top.svg" alt="">
+    </div>
+
+    <div class="flsm-parallax--slide-up-bottom--trigger height-mobile display-none"></div>
+  
+    <div class="flsm-parallax--slide-up-bottom--takeover-content bg-accent-cool-lightest padding-y-9">
+      <div class="grid-container">
+  
+        <h3>Sub-section Containing the Takeover Content</h3>
+  
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus temporibus nemo esse sit, debitis corporis eum porro et reprehenderit, eius cupiditate? Consequatur, odit iusto ducimus totam quam quae similique repellendus?</p>
+
+        <div class="height-card-lg add-aspect-4x3 bg-base"></div>
+        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus temporibus nemo esse sit, debitis corporis eum porro et reprehenderit, eius cupiditate? Consequatur, odit iusto ducimus totam quam quae similique repellendus?</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container padding-top-4 padding-bottom-1">
+  <p>Scaling animation toggled off:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--slide-up-bottom position-relative">
+
+  <div class="flsm-parallax--slide-up-bottom--pin z-bottom bg-base-lightest padding-top-9">
+    <div class="pin-child">
+
+      <div class="grid-container">
+        <h3>The Parallax Effect Sub-Section</h3>
+  
+        <p>This is the first sub-section, required to make the pinning effect of the animation work.</p>
+  
+        <p>This section remains pinned until the bottom of it reaches the bottom of the second sub-section. It's a good idea to put enough content in here to make it fill the viewport before it gets pinned to the bottom of the screen, and to make the second sub-section a little taller as well so the parallax effect lasts longer. We can do this with content, or by adding spacer elements to add empty space.</p>
+  
+        <p>Use an .svg for the animated graphic for best appearance. The graphic container is a set pixel height, which determines how quickly the graphic scales. The graphic itself can be any size or shape, but be mindful how much space it will take up when it's the full screen width. The image will retain its aspect ratio while it scales.</p>
+  
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora architecto doloremque molestias quam, voluptas accusamus dolor perspiciatis totam ab consequuntur nostrum pariatur consectetur vero, ex ipsum libero aperiam. Sint, facere.</p>
+  
+        <div class="height-card-lg add-aspect-4x3 bg-base"></div>
+  
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat magni repellendus distinctio ducimus deserunt ab, dolor velit rem asperiores qui excepturi a blanditiis tempore, iusto inventore assumenda quisquam deleniti omnis.</p>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt excepturi quo velit dolor eveniet doloribus fugit maiores nostrum voluptate unde labore, laudantium adipisci necessitatibus et, delectus ratione blanditiis iure!</p>
+      </div>
+
+      <div class="takeover-spacer height-card"></div>
+
+    </div>
+  </div>
+
+  <div class="flsm-parallax--slide-up-bottom--takeover-container position-relative overflow-visible">
+  
+    <div class="flsm-parallax--slide-up-bottom--topper height-mobile display-flex flex-column flex-justify-end flex-align-center">
+      <img aria-hidden="true" class="display-block width-full overflow-visible" src="./img/nfip/nfip-components/nfip_waves_7.gif" alt="" data-original-image="./img/nfip/nfip-components/nfip_waves_7.gif" data-fallback-image="./img/nfip/nfip-components/nfip_waves_7-static.png">
+      <button class="flsm-parallax--slide-up-bottom--pause"><span>Pause</span></button>
+    </div>
+
+    <div class="flsm-parallax--slide-up-bottom--trigger height-mobile display-none"></div>
+  
+    <div class="flsm-parallax--slide-up-bottom--takeover-content bg-accent-cool-lightest padding-y-9">
+      <div class="grid-container">
+  
+        <h3>Sub-section Containing the Takeover Content</h3>
+  
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus temporibus nemo esse sit, debitis corporis eum porro et reprehenderit, eius cupiditate? Consequatur, odit iusto ducimus totam quam quae similique repellendus?</p>
+
+        <div class="height-card-lg add-aspect-4x3 bg-base"></div>
+        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus temporibus nemo esse sit, debitis corporis eum porro et reprehenderit, eius cupiditate? Consequatur, odit iusto ducimus totam quam quae similique repellendus?</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-4 margin-bottom-10">
+  <h3>Code</h3>
+  <p>HTML:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">&lt;div class=&quot;flsm-gsap flsm-parallax--slide-up-bottom {--animate-image-scale} position-relative&quot;&gt;
+
+      &lt;div class=&quot;flsm-parallax--slide-up-bottom--pin z-bottom {user added class names | default: margin-top-8}&quot;&gt;
+        &lt;div class=&quot;pin-child&quot;&gt;
+    
+          content/paragraphs...
+    
+          &lt;div class=&quot;takeover-spacer height-card&quot;&gt;&lt;/div&gt;
+    
+        &lt;/div&gt;
+      &lt;/div&gt;
+    
+      &lt;div class=&quot;flsm-parallax--slide-up-bottom--takeover-container position-relative overflow-visible&quot;&gt;
+      
+        &lt;div class=&quot;flsm-parallax--slide-up-bottom--topper height-mobile display-flex flex-column flex-justify-end flex-align-center&quot;&gt;
+          &lt;img aria-hidden=&quot;true&quot; class=&quot;display-block width-full overflow-visible&quot; src=&quot;./img/nfip/nfip-components/nfip_waves_7.gif&quot; alt=&quot;&quot; {data-original-image=&quot;./img/nfip/nfip-components/nfip_waves_7.gif&quot; data-fallback-image=&quot;./img/nfip/nfip-components/nfip_waves_7-static.png&quot;}&gt;
+          {&lt;button class=&quot;flsm-parallax--slide-up-bottom--pause&quot;&gt;&lt;span&gt;Pause&lt;/span&gt;&lt;/button&gt;}
+        &lt;/div&gt;
+    
+        &lt;div class=&quot;flsm-parallax--slide-up-bottom--trigger height-mobile display-none&quot;&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;flsm-parallax--slide-up-bottom--takeover-content {user added class names | default: padding-y-8 bg-accent-cool-lightest}&quot;&gt;
+      
+          content/paragraphs...
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</pre>
+  </code>
+
+  <p>JS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">// flsm-parallax--slide-up-bottom
+      function createSlideUpBottomAnimation(element){
+    const topper = element.querySelector('.flsm-parallax--slide-up-bottom--topper');
+    const topperImg = topper.querySelector('img');
+
+    const trigger = element.querySelector('.flsm-parallax--slide-up-bottom--trigger');
+
+    const takeover = element.querySelector('.flsm-parallax--slide-up-bottom--takeover-container');
+    const takeoverContent = element.querySelector('.flsm-parallax--slide-up-bottom--takeover-content');
+
+    const pin = element.querySelector('.flsm-parallax--slide-up-bottom--pin');
+    const pinChild = element.querySelector('.flsm-parallax--slide-up-bottom--pin .pin-child');
+
+    const pinEnd = takeover.offsetHeight;
+
+    // remove the display-none class from the trigger element when scaling animation is toggled on; it exists just in case the JS or animation doesn't load properly
+    if( element.classList.contains('--animate-image-scale') ){
+      topper.classList.add('position-absolute', 'top-2px');
+
+      trigger.classList.remove('display-none');
+    };
+
+    // start animating
+    gsap.to(pinChild,{
+      scrollTrigger: {
+        trigger: pin,
+        pin: !0,
+        pinSpacing: !1,
+        start: () => "bottom bottom",
+        end: () => `+=${pinEnd}`,
+      },
+    });
+
+    if( element.classList.contains('--animate-image-scale') ){
+      gsap.fromTo(takeoverContent, {
+        y: -320,
+      }, {
+        y: 1,
+        ease: "none",
+        scrollTrigger: {
+          scrub: 0,
+          trigger: trigger,
+          start: "top bottom",
+          end: "bottom bottom",
+        },
+      });
+
+      gsap.fromTo(topperImg, {
+        scale: 0,
+        y: 0,
+      }, {
+        scale: 1,
+        y: 320,
+        transformOrigin: "bottom center",
+        ease: "none",
+        scrollTrigger: {
+          scrub: 0,
+          trigger: trigger,
+          start: "top bottom",
+          end: "bottom bottom",
+        },
+      });
+    };
+
+    // pausing the slide-up-bottom animated images
+      // check if pause button exists first
+      const getPauseButton = topper.querySelector('.flsm-parallax--slide-up-bottom--pause');
+      let paused = false;
+      
+      if (getPauseButton !== null){
+        const imageOriginal = topperImg.getAttribute('data-original-image');
+        const imageFallback = topperImg.getAttribute('data-fallback-image');
+        const buttonText = getPauseButton.querySelector('span');
+
+        getPauseButton.addEventListener("click", () => {
+          if(paused === false){
+            getPauseButton.classList.add("paused");
+            buttonText.textContent = "Play";
+            topperImg.src = imageFallback;
+            paused = true;
+          } else {
+            getPauseButton.classList.remove("paused");
+            buttonText.textContent = "Pause";
+            topperImg.src = imageOriginal;
+            paused = false;
+          };
+        });
+      };
+  };
+      // end flsm-parallax--slide-up-bottom</pre>
+  </code>
+
+  <p>SCSS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">.flsm-parallax--slide-up-bottom{
+
+      &--topper{
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    
+        img{
+          object-fit: cover;
+          object-position: bottom;
+        }
+      }
+      &.--animate-image-scale{
+        
+        .flsm-parallax--slide-up-bottom--topper{
+          width: 120%;
+          margin-left: -10%;
+          margin-top: - units('mobile');
+        }
+      }
+    }</pre>
+  </code>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>
+
+<div id="background-zoom" class="grid-container margin-top-10">
+  <h2>Parallax: Background Zoom</h2>
+  <p>This is a set of two sub-sections for content and nested paragraphs, plus two divs for the two background elements.</p>
+
+  <p>The user can select to use a background color class or upload an image for the primary background (the one with the lowest index that doesn't get animated). A text input field might be easiest and most flexible, but content managers may prefer a predefined list of our theme background color options. If the user doesn't upload an image, use the background color class input, and don't print the <img> tag.</p>
+
+  <p>The user can choose between a light or dark version that changes the overlay color and toggles the .usa-dark-background utility class.</p>
+
+  <p>Finally, the user can toggle the color overlay on or off. <strong>Caution:</strong> turning this off puts most of the onus on the designers and content managers to make sure the background image contrasts enough with the text content.</p>
+
+  <p>Below is an example of how it works.</p>
+
+  <p>Dark Version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-zoom --dark position-relative minh-viewport text-semibold">
+
+  <div class="flsm-parallax--background-zoom--content-container position-relative height-full width-full z-200">
+    <div class="flsm-parallax--background-zoom--content-one height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h1>Section 1</h1>
+  
+        <p>Both images take up the full container height and width, so make sure your secondary image has some transparency, or the effect will be lost.</p>
+  
+        <p>Keep both sections of content very short. The image backgrounds are set to be equal the viewport height, which could be small on some devices.</p>
+      </div>
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--content-two height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h2>Section 2</h2>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis est iusto earum possimus accusamus deleniti similique nisi ea illo architecto neque, dolore officiis repellat quos quidem incidunt voluptate vel accusantium?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-zoom--bg-container position-absolute top-0 left-0 height-viewport width-full overflow-hidden display-none">
+
+    <div class="flsm-parallax--background-zoom--bg-secondary position-absolute top-0 left-0 height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/test-zoom-anim.png" alt="">
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--bg-primary position-absolute top-0 left-0 height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/288-1400x788.jpg" alt="">
+    </div>
+  </div>
+
+</div>
+
+<div class="grid-container padding-top-3 padding-bottom-1">
+  <p>Light Version checked:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-zoom position-relative minh-viewport text-semibold">
+
+  <div class="flsm-parallax--background-zoom--content-container position-relative height-full width-full z-200">
+    <div class="flsm-parallax--background-zoom--content-one height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h1>Section 1</h1>
+  
+        <p>Both images take up the full container height and width, so make sure your secondary image has some transparency, or the effect will be lost.</p>
+  
+        <p>Keep both sections of content very short. The image backgrounds are set to be equal the viewport height, which could be small on some devices.</p>
+      </div>
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--content-two height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h2>Section 2</h2>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis est iusto earum possimus accusamus deleniti similique nisi ea illo architecto neque, dolore officiis repellat quos quidem incidunt voluptate vel accusantium?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-zoom--bg-container position-absolute top-0 left-0 height-viewport width-full overflow-hidden display-none">
+
+    <div class="flsm-parallax--background-zoom--bg-secondary position-absolute top-0 left-0 height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/test-zoom-anim.png" alt="">
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--bg-primary position-absolute top-0 left-0 height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/288-1400x788.jpg" alt="">
+    </div>
+  </div>
+
+</div>
+
+<div class="grid-container padding-top-3 padding-bottom-1">
+  <p>Overlay turned off, dark version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-zoom --dark --no-overlay position-relative minh-viewport text-semibold">
+
+  <div class="flsm-parallax--background-zoom--content-container position-relative height-full width-full z-200">
+    <div class="flsm-parallax--background-zoom--content-one height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h1>Section 1</h1>
+  
+        <p>Both images take up the full container height and width, so make sure your secondary image has some transparency, or the effect will be lost.</p>
+  
+        <p>Keep both sections of content very short. The image backgrounds are set to be equal the viewport height, which could be small on some devices.</p>
+      </div>
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--content-two height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h2>Section 2</h2>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis est iusto earum possimus accusamus deleniti similique nisi ea illo architecto neque, dolore officiis repellat quos quidem incidunt voluptate vel accusantium?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-zoom--bg-container position-absolute top-0 left-0 height-viewport width-full overflow-hidden display-none">
+
+    <div class="flsm-parallax--background-zoom--bg-secondary position-absolute top-0 left-0 height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/test-zoom-anim.png" alt="">
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--bg-primary position-absolute top-0 left-0 height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/dark-bg-test.jpg" alt="">
+    </div>
+  </div>
+
+</div>
+
+<div class="grid-container padding-top-3 padding-bottom-1">
+  <p>Overlay turned off, light version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-zoom --no-overlay position-relative minh-viewport text-semibold">
+
+  <div class="flsm-parallax--background-zoom--content-container position-relative height-full width-full z-200">
+    <div class="flsm-parallax--background-zoom--content-one height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h1>Section 1</h1>
+  
+        <p>Both images take up the full container height and width, so make sure your secondary image has some transparency, or the effect will be lost.</p>
+  
+        <p>Keep both sections of content very short. The image backgrounds are set to be equal the viewport height, which could be small on some devices.</p>
+      </div>
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--content-two height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center">
+      <div class="grid-container">
+        <h2>Section 2</h2>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis est iusto earum possimus accusamus deleniti similique nisi ea illo architecto neque, dolore officiis repellat quos quidem incidunt voluptate vel accusantium?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-zoom--bg-container position-absolute top-0 left-0 height-viewport width-full overflow-hidden display-none">
+
+    <div class="flsm-parallax--background-zoom--bg-secondary position-absolute top-0 left-0 height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/test-zoom-anim.png" alt="">
+    </div>
+  
+    <div class="flsm-parallax--background-zoom--bg-primary position-absolute top-0 left-0 height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/light-bg-test.jpg" alt="">
+    </div>
+  </div>
+
+</div>
+
+<div class="grid-container margin-top-4 margin-bottom-10">
+  <h3>Code</h3>
+  <p>HTML:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">&lt;div class=&quot;flsm-gsap flsm-parallax--background-zoom {optional: --dark} {optional: --no-overlay} position-relative minh-viewport text-semibold&quot;&gt;
+
+      &lt;div class=&quot;flsm-parallax--background-zoom--content-container position-relative height-full width-full z-200&quot;&gt;
+        &lt;div class=&quot;flsm-parallax--background-zoom--content-one height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center&quot;&gt;
+          content / paragraphs...
+        &lt;/div&gt;
+      
+        &lt;div class=&quot;flsm-parallax--background-zoom--content-two height-viewport overflow-hidden width-full display-flex flex-column flex-justify-center&quot;&gt;
+          content / paragraphs...
+        &lt;/div&gt;
+      &lt;/div&gt;
+    
+      &lt;div class=&quot;flsm-parallax--background-zoom--bg-container position-absolute top-0 left-0 height-viewport width-full overflow-hidden display-none&quot;&gt;
+    
+        &lt;div class=&quot;flsm-parallax--background-zoom--bg-secondary position-absolute top-0 left-0 height-full width-full z-100&quot;&gt;
+          &lt;img aria-hidden=&quot;true&quot; class=&quot;display-block height-full width-full&quot; src=&quot;{user added image}&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+      
+        &lt;div class=&quot;flsm-parallax--background-zoom--bg-primary position-absolute top-0 left-0 height-full width-full&quot;&gt;
+          &lt;img aria-hidden=&quot;true&quot; class=&quot;display-block height-full width-full&quot; src=&quot;{user added image}&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    
+    &lt;/div&gt;</pre>
+  </code>
+
+  <p>JS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">// flsm-parallax--background-zoom
+      function createBackgroundZoomAnimation(element){
+        const backgroundZoomContent = element.querySelector('.flsm-parallax--background-zoom--content-container');
+        const backgroundZoomContentOne = backgroundZoomContent.querySelector('.flsm-parallax--background-zoom--content-one');
+        const backgroundZoomContentTwo = backgroundZoomContent.querySelector('.flsm-parallax--background-zoom--content-two');
+    
+        const backgroundZoomBGContainer = element.querySelector('.flsm-parallax--background-zoom--bg-container');
+        const backgroundZoomBGSecondary = element.querySelector('.flsm-parallax--background-zoom--bg-secondary');
+        const backgroundZoomBGSecondaryImage = backgroundZoomBGSecondary.querySelector('img');
+    
+        // toggle fallback classes, implemented in case the JS doesn't load
+        backgroundZoomBGContainer.classList.remove('display-none');
+        backgroundZoomContentTwo.classList.add('flsm-animation-initiated');
+    
+        // check whether the overlay isn't toggled off, then whether the light background is toggled, or the dark background, then set the overlay color.
+        if( !element.classList.contains('--no-overlay') ) {
+          if( element.classList.contains('--dark') ) {
+            gsap.set(backgroundZoomContent, {
+              backgroundColor: "rgba(0, 43, 71, .5)",
+              textShadow: "2px 0px 50px black, 0px 0px 4px rgba(0,0,0,.25)",
+            });
+          } else { // use the light version
+            gsap.set(backgroundZoomContent, {
+              backgroundColor: "rgba(214, 233, 242, .5)",
+              textShadow: "2px 0px 50px white, 0px 0px 4px rgba(255,255,255,.25)",
+            });
+          };
+        };
+        // regardless of overlayt toggle, a dark version needs the usa-dark-background utility class
+        if( element.classList.contains('--dark') ) {
+          element.classList.add('usa-dark-background');
+        };
+    
+        ScrollTrigger.create({
+          trigger: backgroundZoomBGContainer,
+          pin: !0,
+          start: "top top",
+          end: () => `+=${(window.innerHeight * 1.2) + 480} bottom`,
+        });
+    
+        gsap.to(backgroundZoomBGSecondaryImage, {
+          scale: 2,
+          scrollTrigger: {
+            trigger: backgroundZoomContent,
+            scrub: 0,
+            start: () => `+=${window.innerHeight} bottom`,
+            end: () => `+=${window.innerHeight * 2}`,
+          },
+        });
+    
+        gsap.fromTo(backgroundZoomContentOne, {
+          opacity: 1,
+        }, {
+          opacity: 0,
+          ease: "power3.in",
+          scrollTrigger: {
+            trigger: backgroundZoomContentOne,
+            scrub: 0,
+            pin: !0,
+            start: "bottom bottom",
+            end: () => `+=240`,
+          },
+        });
+    
+        gsap.fromTo(backgroundZoomContentTwo, {
+          opacity: 0,
+        }, {
+          opacity: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: backgroundZoomContentTwo,
+            scrub: 0,
+            pin: !0,
+            start: "center center",
+            end: () => `+=240`,
+          },
+        });
+    
+        // check whether the overlay is not toggled off, then if the light background is toggled, or the dark background, then set the overlay animation.
+        if( !element.classList.contains('--no-overlay') ) {
+          if( element.classList.contains('--dark') ) {
+            gsap.to(backgroundZoomContent, {
+              backgroundColor: "rgba(0, 43, 71, 1)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: backgroundZoomContentTwo,
+                scrub: 0,
+                start: "bottom 90%",
+                end: () => `+=240`,
+              },
+            });
+          } else { // use the light version
+            gsap.to(backgroundZoomContent, {
+              backgroundColor: "rgba(214, 233, 242, 1)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: backgroundZoomContentTwo,
+                scrub: 0,
+                start: "bottom 90%",
+                end: () => `+=240`,
+              },
+            });
+          };
+        };
+      };
+      // end flsm-parallax--background-zoom</pre>
+  </code>
+
+  <p>SCSS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">.flsm-parallax--background-zoom{
+      &--bg-secondary,
+      &--bg-primary{
+    
+        img{
+          object-fit: cover;
+          object-position: center center;
+        };
+      }
+      &--content-two{
+        &.flsm-animation-initiated{
+          margin-top: -80vh;
+        }
+      }
+    }</pre>
+  </code>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>
+
+<div id="background-fall-away" class="grid-container margin-top-10">
+  <h2>Parallax: Background Fall Away</h2>
+  <p>This is a section that has multiple background elements, two of which overlay the section and animate downward and fade out - falling away - as the user scrolls.</p>
+
+  <p>The user can select to use a background color class or upload an image for the primary background (the one with the lowest index that doesn't get animated). A text input field might be easiest and most flexible, but content managers may prefer a predefined list of our theme background color options. If the user doesn't upload an image, use the background color class input, and don't print the &lt;img&gt; tag.</p>
+
+  <p>The user can choose between a light or dark version that changes the overlay color and toggles the .usa-dark-background utility class.</p>
+
+  <p>Finally, the user can toggle the color overlay on or off. <strong>Caution:</strong> turning this off puts most of the onus on the designers and content managers to make sure the background image contrasts enough with the text content.</p>
+
+  <p>Below is an example of how it works.</p>
+
+  <p>Dark version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-fall-away --dark minh-viewport position-relative display-flex flex-column flex-justify-center">
+  <div class="flsm-parallax--background-fall-away--content text-semibold z-top padding-y-9">
+    <div class="grid-container">
+      <h2>Section Title</h2>
+
+      <p>This is the only section of content available to this bundle. Be careful with making it too large, though - background images scale to cover the whole container.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-fall-away--bg-container position-absolute top-0 left-0 height-full width-full overflow-hidden">
+    <div class="flsm-parallax--background-fall-away--color-overlay position-absolute height-full width-full z-300">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-1 position-absolute height-full width-full z-200">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-1.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-2 position-absolute height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-2.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-primary position-absolute height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/288-1400x788.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="grid-container padding-top-3 padding-bottom-1">
+  <p>Light version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-fall-away minh-viewport position-relative display-flex flex-column flex-justify-center">
+  <div class="flsm-parallax--background-fall-away--content text-semibold z-top padding-y-9">
+    <div class="grid-container">
+      <h2>Section Title</h2>
+
+      <p>This is the only section of content available to this bundle. Be careful with making it too large, though - background images scale to cover the whole container.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-fall-away--bg-container position-absolute top-0 left-0 height-full width-full overflow-hidden">
+    <div class="flsm-parallax--background-fall-away--color-overlay position-absolute height-full width-full z-300">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-1 position-absolute height-full width-full z-200">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-1.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-2 position-absolute height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-2.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-primary position-absolute height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/288-1400x788.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="grid-container padding-top-3 padding-bottom-1">
+  <p>Overlay turned off, dark version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-fall-away --dark --no-overlay minh-viewport position-relative display-flex flex-column flex-justify-center">
+  <div class="flsm-parallax--background-fall-away--content text-semibold z-top padding-y-9">
+    <div class="grid-container">
+      <h2>Section Title</h2>
+
+      <p>This is the only section of content available to this bundle. Be careful with making it too large, though - background images scale to cover the whole container.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-fall-away--bg-container position-absolute top-0 left-0 height-full width-full overflow-hidden">
+    <div class="flsm-parallax--background-fall-away--color-overlay position-absolute height-full width-full z-300">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-1 position-absolute height-full width-full z-200">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-1.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-2 position-absolute height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-2.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-primary position-absolute height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/dark-bg-test.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="grid-container padding-top-3 padding-bottom-1">
+  <p>Overlay turned off, light version:</p>
+</div>
+
+<div class="flsm-gsap flsm-parallax--background-fall-away --no-overlay minh-viewport position-relative display-flex flex-column flex-justify-center">
+  <div class="flsm-parallax--background-fall-away--content text-semibold z-top padding-y-9">
+    <div class="grid-container">
+      <h2>Section Title</h2>
+
+      <p>This is the only section of content available to this bundle. Be careful with making it too large, though - background images scale to cover the whole container.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nam aspernatur magni, quod odio deserunt enim perferendis earum? Error at placeat eius modi est dolorem, illum expedita debitis nisi obcaecati!</p>
+    </div>
+  </div>
+
+  <div class="flsm-parallax--background-fall-away--bg-container position-absolute top-0 left-0 height-full width-full overflow-hidden">
+    <div class="flsm-parallax--background-fall-away--color-overlay position-absolute height-full width-full z-300">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-1 position-absolute height-full width-full z-200">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-1.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-overlay-2 position-absolute height-full width-full z-100">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/animation-hills-2.png" alt="">
+    </div>
+
+    <div class="flsm-parallax--background-fall-away--bg-primary position-absolute height-full width-full">
+      <img aria-hidden="true" class="display-block height-full width-full" src="./img/nfip/nfip-components/light-bg-test.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-4 margin-bottom-10">
+  <h3>Code</h3>
+  <p>HTML:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">&lt;div class=&quot;flsm-gsap flsm-parallax--background-fall-away {optional: --dark} {optional: --no-overlay} minh-viewport position-relative display-flex flex-column flex-justify-center&quot;&gt;
+      &lt;div class=&quot;flsm-parallax--background-fall-away--content text-semibold z-top&quot;&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+          content / paragraphs...
+        &lt;/div&gt;
+      &lt;/div&gt;
+    
+      &lt;div class=&quot;flsm-parallax--background-fall-away--bg-container position-absolute top-0 left-0 height-full width-full overflow-hidden&quot;&gt;
+        &lt;div class=&quot;flsm-parallax--background-fall-away--color-overlay position-absolute height-full width-full z-300&quot;&gt;
+        &lt;/div&gt;
+    
+        &lt;div class=&quot;flsm-parallax--background-fall-away--bg-overlay-1 position-absolute height-full width-full z-200&quot;&gt;
+          &lt;img aria-hidden=&quot;true&quot; class=&quot;display-block height-full width-full&quot; src=&quot;{user added image}&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+    
+        &lt;div class=&quot;flsm-parallax--background-fall-away--bg-overlay-2 position-absolute height-full width-full z-100&quot;&gt;
+          &lt;img aria-hidden=&quot;true&quot; class=&quot;display-block height-full width-full&quot; src=&quot;{user added image}&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+    
+        &lt;div class=&quot;flsm-parallax--background-fall-away--bg-primary position-absolute height-full width-full&quot;&gt;
+          &lt;img aria-hidden=&quot;true&quot; class=&quot;display-block height-full width-full&quot; src=&quot;{user added image}&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</pre>
+  </code>
+
+  <p>JS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">// flsm-parallax--background-fall-away
+      function createBackgroundFallAwayAnimation(element){
+        const backgroundFallAwayBGContainer = element.querySelector('.flsm-parallax--background-fall-away--bg-container');
+    
+        const backgroundFallAwayColorOverlay = backgroundFallAwayBGContainer.querySelector('.flsm-parallax--background-fall-away--color-overlay');
+        const backgroundFallAwayOverlayOne = backgroundFallAwayBGContainer.querySelector('.flsm-parallax--background-fall-away--bg-overlay-1');
+        const backgroundFallAwayOverlayTwo = backgroundFallAwayBGContainer.querySelector('.flsm-parallax--background-fall-away--bg-overlay-2');
+    
+        const backgroundFallAwayContent = element.querySelector('.flsm-parallax--background-fall-away--content');
+    
+        // check whether overlay isn't toggled off, then wether the dark or light version is toggled, then set background colors. 
+        if( !element.classList.contains('--no-overlay') ){
+          if( element.classList.contains('--dark') ){
+            gsap.set(backgroundFallAwayColorOverlay, {
+              backgroundColor: "rgba(0, 43, 71, .5)",
+            });
+    
+            gsap.set(backgroundFallAwayContent, {
+              textShadow: "2px 0px 50px black, 0px 0px 4px rgba(0,0,0,.25)",
+            });
+          } else { // use light version
+            gsap.set(backgroundFallAwayColorOverlay, {
+              backgroundColor: "rgba(214, 233, 242, .5)",
+            });
+    
+            gsap.set(backgroundFallAwayContent, {
+              textShadow: "2px 0px 50px white, 0px 0px 4px rgba(255,255,255,.25)",
+            });
+          };
+        };
+        // Regardless of overlay, the dark version needs the usa-dark-background utility class.
+        if( element.classList.contains('--dark') ){
+          element.classList.add('usa-dark-background')
+        };
+    
+        ScrollTrigger.create({
+          trigger: element,
+          pin: !0,
+          pinSpacing: 1,
+          start: "top top",
+        });
+    
+        gsap.to(backgroundFallAwayOverlayOne, {
+          y: `50%`,
+          x: `-50%`,
+          ease: "none",
+          scrollTrigger: {
+            trigger: element,
+            scrub: 0,
+            start: "bottom bottom",
+            end: () => `+=100%`,
+          },
+        });
+        gsap.to(backgroundFallAwayOverlayOne, {
+          opacity: 0,
+          ease: "circ.in",
+          scrollTrigger: {
+            trigger: element,
+            scrub: 0,
+            start: "bottom bottom",
+            end: () => `+=70%`,
+          },
+        });
+    
+        gsap.to(backgroundFallAwayOverlayTwo, {
+          y: `50%`,
+          x: `50%`,
+          ease: "none",
+          scrollTrigger: {
+            trigger: element,
+            scrub: 0,
+            start: "bottom bottom",
+            end: () => `+=100%`,
+          },
+        });
+        gsap.to(backgroundFallAwayOverlayTwo, {
+          opacity: 0,
+          ease: "circ.in",
+          scrollTrigger: {
+            trigger: element,
+            scrub: 0,
+            start: "bottom bottom",
+            end: () => `+=70%`,
+          },
+        });
+    
+        // check whether overlay isn't toggled off, then wether the dark or light version is toggled, then apply overlay color animation. 
+        if( !element.classList.contains('--no-overlay') ){
+          if( element.classList.contains('--dark') ){
+            gsap.to(backgroundFallAwayColorOverlay, {
+              backgroundColor: "rgba(0, 43, 71, 1)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: element,
+                scrub: 0,
+                start: "bottom 90%",
+                end: () => `+=240`,
+              },
+            });
+          } else { // use light version
+            gsap.to(backgroundFallAwayColorOverlay, {
+              backgroundColor: "rgba(214, 233, 242, 1)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: element,
+                scrub: 0,
+                start: "bottom 90%",
+                end: () => `+=240`,
+              },
+            });
+          };
+        };
+      };
+      // end flsm-parallax--background-fall-away</pre>
+  </code>
+
+  <p>SCSS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">.flsm-parallax--background-fall-away{
+
+      &--bg-overlay-1,
+      &--bg-overlay-2,
+      &--bg-primary{
+        
+        img{
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+    }</pre>
+  </code>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>
+
+<div id="fixed-fiftyfifty" class="grid-container margin-top-10">
+  <h2>Fixed 50/50 Media</h2>
+  <p>This is a set of two 50/50 sections, content and image, where the image element stays pinned to the viewport while the text scrolls.</p>
+
+  <p>Below is an example of how it works.</p>
+
+  <p class="margin-top-4">Image on the right:</p>
+</div>
+
+<div class="flsm-gsap flsm-section--fixed-media margin-y-8">
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+      <div class="flsm-section--fixed-media--content tablet:grid-col-6">
+        <h2>Content</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima debitis nemo at magni, beatae illo deserunt dolores ex dolor deleniti fugiat exercitationem hic rerum qui laboriosam obcaecati cumque autem quos?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima debitis nemo at magni, beatae illo deserunt dolores ex dolor deleniti fugiat exercitationem hic rerum qui laboriosam obcaecati cumque autem quos?</p>
+
+        <h2>More stuff</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quo, suscipit nisi ullam odio earum quod provident? Quia sequi ut omnis officiis sit, iste nesciunt, ipsam eaque minus magnam laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quo, suscipit nisi ullam odio earum quod provident? Quia sequi ut omnis officiis sit, iste nesciunt, ipsam eaque minus magnam laudantium.</p>
+
+        <h3>And some things</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, neque, nihil quam id nemo dolor cumque dignissimos labore architecto, corrupti ut dolorum quod iusto saepe provident sit atque. Sunt, aspernatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, neque, nihil quam id nemo dolor cumque dignissimos labore architecto, corrupti ut dolorum quod iusto saepe provident sit atque. Sunt, aspernatur.</p>
+
+        <h2>Even more stuff and things</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus commodi perspiciatis maiores, cum, aliquid est consectetur incidunt perferendis eligendi debitis sapiente inventore vel. Error sit officiis explicabo quis delectus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus commodi perspiciatis maiores, cum, aliquid est consectetur incidunt perferendis eligendi debitis sapiente inventore vel. Error sit officiis explicabo quis delectus?</p>
+      </div>
+      <div class="flsm-section--fixed-media--graphic tablet:grid-col-6">
+        <div class="flsm-section--fixed-Media--graphic--pin-wrapper display-flex flex-justify-center flex-align-center">
+          <div class="flsm-section--fixed-Media--graphic--pin"><img class="height-auto width-full" src="./img/nfip/nfip-components/157-600x400.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-4">
+  <p>Image on the left:</p>
+</div>
+
+<div class="flsm-gsap flsm-section--fixed-media margin-y-8">
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+      <div class="flsm-section--fixed-media--graphic tablet:grid-col-6">
+        <div class="flsm-section--fixed-Media--graphic--pin-wrapper display-flex flex-justify-center flex-align-center">
+          <div class="flsm-section--fixed-Media--graphic--pin"><img class="height-auto width-full" src="./img/nfip/nfip-components/157-600x400.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="flsm-section--fixed-media--content tablet:grid-col-6">
+        <h2>Content</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima debitis nemo at magni, beatae illo deserunt dolores ex dolor deleniti fugiat exercitationem hic rerum qui laboriosam obcaecati cumque autem quos?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima debitis nemo at magni, beatae illo deserunt dolores ex dolor deleniti fugiat exercitationem hic rerum qui laboriosam obcaecati cumque autem quos?</p>
+
+        <h2>More stuff</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quo, suscipit nisi ullam odio earum quod provident? Quia sequi ut omnis officiis sit, iste nesciunt, ipsam eaque minus magnam laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quo, suscipit nisi ullam odio earum quod provident? Quia sequi ut omnis officiis sit, iste nesciunt, ipsam eaque minus magnam laudantium.</p>
+
+        <h3>And some things</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, neque, nihil quam id nemo dolor cumque dignissimos labore architecto, corrupti ut dolorum quod iusto saepe provident sit atque. Sunt, aspernatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, neque, nihil quam id nemo dolor cumque dignissimos labore architecto, corrupti ut dolorum quod iusto saepe provident sit atque. Sunt, aspernatur.</p>
+
+        <h2>Even more stuff and things</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus commodi perspiciatis maiores, cum, aliquid est consectetur incidunt perferendis eligendi debitis sapiente inventore vel. Error sit officiis explicabo quis delectus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus commodi perspiciatis maiores, cum, aliquid est consectetur incidunt perferendis eligendi debitis sapiente inventore vel. Error sit officiis explicabo quis delectus?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-4 margin-bottom-10">
+  <p>HTML example:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">&lt;div class=&quot;flsm-gsap flsm-section--fixed-media {user added class names | default: margin-y-8}&quot;&gt;
+  &lt;div class=&quot;grid-container&quot;&gt;
+    &lt;div class=&quot;grid-row grid-gap&quot;&gt;
+      &lt;div class=&quot;flsm-section--fixed-media--content tablet:grid-col-6&quot;&gt;
+        content
+      &lt;/div&gt;
+      &lt;div class=&quot;flsm-section--fixed-media--graphic tablet:grid-col-6&quot;&gt;
+        &lt;div class=&quot;flsm-section--fixed-Media--graphic--pin-wrapper display-flex flex-justify-center flex-align-center&quot;&gt;
+          &lt;div class=&quot;flsm-section--fixed-Media--graphic--pin&quot;&gt;&lt;img class=&quot;height-auto width-full&quot; src=&quot;{image URL}&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </code>
+  <p>It might be the case that a "custom classes" field isn't necessary for this paragraph because the margin/padding for the section could be controlled in Layout Builder.</p>
+
+  <p>JS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">// flsm-section--fixed-media
+  function createFixedMedia(element){
+    const fixedMediaGraphic = element.querySelector('.flsm-section--fixed-media--graphic');
+    const fixedMediaGraphicPin = fixedMediaGraphic.querySelector('.flsm-section--fixed-Media--graphic--pin');
+    const fixedMediaGraphicImageElement = fixedMediaGraphic.querySelector('img');
+    const fixedMediaImageHeight = fixedMediaGraphicImageElement.clientHeight;
+
+    const fixedMediaContent = element.querySelector('.flsm-section--fixed-media--content');
+    const fixedMediaContentHeight = fixedMediaContent.offsetHeight;
+
+    // do math to get the height at which the pin should stop
+    const pinHeight = (fixedMediaContentHeight - fixedMediaImageHeight);
+
+    ScrollTrigger.create({
+      trigger: fixedMediaGraphicPin,
+      scrub: 1,
+      pin: true,
+      pinSpacing: !1,
+      start: () => `top +=${(window.innerHeight / 2) - (fixedMediaImageHeight / 2)}`,
+      end: () => `+=${(pinHeight)}`,
+    });
+  };
+  // end flsm-section--fixed-media</pre>
+  </code>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>
+
+<div id="alternating-fixed" class="grid-container margin-top-10">
+  <h2>Alternating Fixed 50/50 Media</h2>
+  <p>This is a set of two content sub-sections and an image, where the image element stays pinned to the viewport and swaps between columns between the content sub-sections.</p>
+
+  <p>Unlike the last one, this one is limited to just two sections, due to specific animation requirements to control how the image swaps from one column to the other.</p>
+
+  <p>Below is an example of how it works.</p>
+</div>
+
+<div class="flsm-gsap flsm-section--alternating-fixed padding-y-8">
+  <div class="grid-container">
+    <div class="grid-row position-relative">
+
+      <div class="flsm-section--alternating-fixed--graphic display-none tablet:display-block tablet:grid-col-6 padding-x-2 position-absolute top-0 right-0 bottom-0">
+        <div class="flsm-section--alternating-fixed--graphic--pin-wrapper display-flex flex-justify-center flex-align-center">
+          <div class="flsm-section--alternating-fixed--graphic--pin z-top">
+            <img class="height-auto maxh-mobile maxw-full" src="./img/nfip/nfip-components/157-600x400.jpg" alt="">
+          </div>
+        </div>
+      </div>
+  
+      <div class="flsm-section--alternating-fixed--content-one tablet:grid-col-6">
+        <h2>Content Section</h2>
+  
+        <p>Under Tablet size, the image disappears and the content becomes full width.</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+      </div>
+
+      <div class="flsm-section--alternating-fixed--content-two tablet:grid-col-6 tablet:grid-offset-6">
+        <div class="height-card-lg"></div>
+
+        <h2>Content Section</h2>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis, ducimus eveniet saepe dolor temporibus voluptates accusantium. Facilis sequi sit tempore aspernatur accusantium, debitis possimus quasi, ut tempora perferendis similique.</p>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+<div class="grid-container margin-top-4 margin-bottom-10">
+  <h3>Code</h3>
+  <p>HTML:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">&lt;div class=&quot;flsm-gsap flsm-section--alternating-fixed {user added class names | default: margin-y-8}&quot;&gt;
+      &lt;div class=&quot;grid-container&quot;&gt;
+        &lt;div class=&quot;grid-row position-relative&quot;&gt;
+    
+          &lt;div class=&quot;flsm-section--alternating-fixed--graphic display-none tablet:display-block tablet:grid-col-6 padding-x-2 position-absolute top-0 right-0 bottom-0&quot;&gt;
+            &lt;div class=&quot;flsm-section--alternating-fixed--graphic--pin-wrapper display-flex flex-justify-center flex-align-center&quot;&gt;
+              &lt;div class=&quot;flsm-section--alternating-fixed--graphic--pin  z-top&quot;&gt;
+                &lt;img class=&quot;height-auto maxh-mobile maxw-full&quot; src=&quot;{user added image}&quot; alt=&quot;&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+      
+          &lt;div class=&quot;flsm-section--alternating-fixed--content-one tablet:grid-col-6&quot;&gt;
+            content / paragraphs...
+          &lt;/div&gt;
+    
+          &lt;div class=&quot;flsm-section--alternating-fixed--content-two tablet:grid-col-6 tablet:grid-offset-6&quot;&gt;
+            &lt;div class=&quot;height-card-lg&quot;&gt;&lt;/div&gt;
+    
+            content / paragraphs...
+          &lt;/div&gt;
+      
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</pre>
+  </code>
+  <p>It might be the case that a "custom classes" field isn't necessary for this paragraph because the margin/padding for the section could be controlled in Layout Builder.</p>
+
+  <p>JS:</p>
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">// flsm-section--alternating-fixed
+      function createAlternatingFixedAnimation(element){
+        const alternatingFixedGraphic = element.querySelector('.flsm-section--alternating-fixed--graphic');
+        const alternatingFixedPin = alternatingFixedGraphic.querySelector('.flsm-section--alternating-fixed--graphic--pin');
+        const alternatingFixedImageElement = alternatingFixedGraphic.querySelector('img');
+    
+        const alternatingFixedContentOne = element.querySelector('.flsm-section--alternating-fixed--content-one');
+        const alternatingFixedContentTwo = element.querySelector('.flsm-section--alternating-fixed--content-two');
+    
+        const alternatingFixedSpacer = alternatingFixedContentTwo.querySelector('[class*="height-"]');
+    
+        const alternatingFixedContentOneHeight = alternatingFixedContentOne.offsetHeight;
+        const alternatingFixedContentTwoHeight = alternatingFixedContentTwo.offsetHeight;
+    
+        // get the width of one content container - they're both the same column size, so it shouldn't matter which one
+        const alternatingFixedContentOneWidth = alternatingFixedContentOne.offsetWidth;
+    
+        // get height of the image element
+        const alternatingFixedImageHeight = alternatingFixedImageElement.clientHeight;
+    
+        // do math to get the height at which the pin should stop
+        //const pinHeight = (alternatingFixedContentOneHeight + alternatingFixedContentTwoHeight) - (alternatingFixedImageHeight * 2);
+        const pinHeight = ((alternatingFixedContentOneHeight + alternatingFixedContentTwoHeight) - alternatingFixedImageHeight);
+    
+        // spacer height
+        const spacerHeight = alternatingFixedSpacer.offsetHeight;
+    
+        ScrollTrigger.create({
+          trigger: alternatingFixedPin,
+          scrub: 1,
+          pin: true,
+          pinSpacing: !1,
+          start: () => `top +=${(window.innerHeight / 2) - (alternatingFixedImageHeight / 2)}`,
+          end: () => `+=${pinHeight}`,
+        });
+    
+        gsap.to(alternatingFixedImageElement, {
+          x: alternatingFixedContentOneWidth * -1,
+          scrollTrigger: {
+            trigger: alternatingFixedContentTwo,
+            scrub: 0,
+            start: () => `-=${alternatingFixedImageHeight / 2} +=${(window.innerHeight / 2) - (alternatingFixedImageHeight / 2)}`,
+            end: () => `+=${(alternatingFixedImageHeight / 2) + spacerHeight}`,
+          },
+        });
+      };
+      // end flsm-section--alternating-fixed</pre>
+  </code>
+</div>
+
+<div class="divider height-1 bg-base-light"></div>

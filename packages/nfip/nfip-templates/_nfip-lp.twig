@@ -1,0 +1,11 @@
+{# {% include "@templates/usa-base/includes/_skipnav.twig" %} #}
+{# {% include "@components/usa-header/src/usa-header--extended/usa-header--extended.twig"  %} #}
+<!-- landing page start -->
+<div id="STARTHERE" style="display:none">start.</div>
+<div class="{% if lpClass %} {{ lpClass }}{% endif %}">
+{% block main %}
+{% endblock %}
+</div>
+<div id="ENDHERE" style="display:none">end.</div>
+<!-- landing page end -->
+{# {% include "@nfip-components/nfip-footer/src/nfip-footer.twig" %} #}

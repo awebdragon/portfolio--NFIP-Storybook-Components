@@ -1,0 +1,31 @@
+{% if quote.cta.button_inverse == true %}
+    {% set button_style = 'inverse' %}
+{% else %}
+    {% set button_style = 'normal' %}
+{% endif %}
+
+<section class="nfip-large-cta">
+    <div  class="usa-section grid-container">
+    <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-12 text-center">
+            <div>
+                <{{ quote.heading_level }} class="font-family-sans"> {{ quote.heading }}</{{ quote.heading_level }}>
+
+                <p class="nfip-intro-text font-family-sans tablet:width-tablet margin-x-auto">{{ quote.text}}</p> 
+
+                {% if quote.cta.link %}
+                    {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                        'button_type': 'default',
+                        'button_markup': 'link',
+                        'button_text': quote.cta.button_label,
+                        'button_url': quote.cta.link,
+                        'button_target': quote.cta.link_target,
+                        'button_id': quote.cta.id,
+                        'button_style': button_style,
+                    } %}
+                {% endif %}
+            </div>  
+        </div>
+    </div>
+    </div>  
+</section>  

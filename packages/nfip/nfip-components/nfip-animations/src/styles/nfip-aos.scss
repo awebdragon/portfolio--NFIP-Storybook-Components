@@ -1,0 +1,47 @@
+/* Custom AOS Animations */
+
+/* zoom in up right fixed */
+[data-aos="zoom-in-up-right-fixed"] {
+  transform: translate3d(-20%, 20%, 0) scale(.6);
+
+  >*{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-delay: .3s;
+  }
+
+  &.aos-animate{
+    >*{
+      opacity: 1;
+    }
+  }
+}
+
+/* zoom in up left fixed */
+[data-aos="zoom-in-up-left-fixed"] {
+  transform: translate3d(20%, 20%, 0) scale(.6);
+
+  >*{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-delay: .3s;
+  }
+
+  &.aos-animate{
+    >*{
+      opacity: 1;
+    }
+  }
+}
+
+/* blur out */
+[data-aos="blur-out"] {
+  filter: blur(.5rem);
+  transition-property: filter;
+
+  &.aos-animate{
+    filter: blur(0);
+  }
+}

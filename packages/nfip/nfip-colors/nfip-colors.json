@@ -1,0 +1,117 @@
+{
+  "nfip_violet": [
+    {
+      "id": "nfip-violet-30",
+      "name": "NFIP Violet 30",
+      "hex": "#6d7f9f",
+      "uswds_token": "blue-cool-40",
+      "white_text": true
+    },
+    {
+      "id": "nfip-violet",
+      "name": "NFIP Violet",
+      "hex": "#2f4876",
+      "uswds_token": "indigo-cool-70",
+      "white_text": true
+    },
+    {
+      "id": "nfip-violet-60",
+      "name": "NFIP Violet 60",
+      "hex": "#213253",
+      "uswds_token": "blue-warm-80v",
+      "white_text": true
+    }
+  ],
+  "nfip_orange": [
+    {
+      "id": "nfip-orange-30",
+      "name": "NFIP Orange 30",
+      "hex": "#f7a56c",
+      "uswds_token": "orange-warm-30",
+      "white_text": false
+    },
+    {
+      "id": "nfip-orange",
+      "name": "NFIP Orange",
+      "hex": "#f47f2d",
+      "uswds_token": "orange-40",
+      "white_text": false
+    },
+    {
+      "id": "nfip-orange-60",
+      "name": "NFIP Orange 60",
+      "hex": "#AB5920",
+      "uswds_token": "orange-warm-50",
+      "white_text": true
+    }
+  ],
+  "nfip_yellow": [
+    {
+      "id": "nfip-yellow-5",
+      "name": "NFIP Yellow 5",
+      "hex": "#fef2dc",
+      "uswds_token": "orange-5v",
+      "white_text": false
+    },
+    {
+      "id": "nfip-yellow-20",
+      "name": "NFIP Yellow 20",
+      "hex": "#fde6b8",
+      "uswds_token": "gold-5v",
+      "white_text": false
+    },
+    {
+      "id": "nfip-yellow-30",
+      "name": "NFIP Yellow 30",
+      "hex": "#FCD383",
+      "uswds_token": "gold-10v",
+      "white_text": false
+    },
+    {
+      "id": "nfip-yellow",
+      "name": "NFIP Yellow",
+      "hex": "#fac04e",
+      "uswds_token": "gold-20v",
+      "white_text": false
+    },
+    {
+      "id": "nfip-yellow-60",
+      "name": "NFIP Yellow 60",
+      "hex": "#af8637",
+      "uswds_token": "gold-40v",
+      "white_text": false
+    }
+  ],
+  "nfip_teal": [
+    {
+      "id": "nfip-teal-30",
+      "name": "NFIP Teal 30",
+      "hex": "#52909c",
+      "uswds_token": "mint-cool-40",
+      "white_text": true
+    },
+    {
+      "id": "nfip-teal",
+      "name": "NFIP Teal",
+      "hex": "#086172",
+      "uswds_token": "cyan-60v",
+      "white_text": true
+    },
+    {
+      "id": "nfip-teal-60",
+      "name": "NFIP Teal 60",
+      "hex": "#064450",
+      "uswds_token": "cyan-80v",
+      "white_text": true
+    }
+  ],
+  "nfip_gray": [
+    {
+      "id": "nfip-gray",
+      "name": "NFIP Gray",
+      "hex": "#898d97",
+      "uswds_token": "gray-cool-40",
+      "white_text": false
+    }
+  ]
+}

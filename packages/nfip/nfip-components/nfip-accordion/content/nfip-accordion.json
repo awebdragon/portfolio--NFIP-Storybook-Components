@@ -1,0 +1,25 @@
+{
+  "nfipAccordions": [
+    {
+      "title": "Accordion Title 1",
+      "title_bg_color": "",
+      "simpleContent": "Some simple content - accordion 1. To use complex content or Twig includes, use Twig block content. See _accordion.twig",
+      "title_extra_classes": "",
+      "body_extra_classes": ""
+    },
+    {
+      "title": "Accordion Title 2",
+      "title_bg_color": "",
+      "simpleContent": "Some simple content - accordion 1. To use complex content or Twig includes, use Twig block content. See _accordion.twig",
+      "title_extra_classes": "",
+      "body_extra_classes": ""
+    },
+    {
+      "title": "Accordion Title 3",
+      "title_bg_color": "",
+      "simpleContent": "Some simple content - accordion 1. To use complex content or Twig includes, use Twig block content. See _accordion.twig",
+      "title_extra_classes": "",
+      "body_extra_classes": ""
+    }
+  ]
+}

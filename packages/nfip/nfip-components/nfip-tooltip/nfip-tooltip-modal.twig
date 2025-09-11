@@ -1,0 +1,16 @@
+{% set id = "tooltip-modal-" ~ random(10000, 99999) %}
+{% set buttonID = "modal-" ~ random(10000, 99999) %}
+
+<a href="#{{ id }}"
+  class="nfip-tooltip usa-tooltip__trigger display-inline-block"
+  aria-controls="{{id}}"
+  data-open-modal
+  role="button"
+  id="{{ buttonID }}"
+><span class="usa-sr-only">{{ tooltipTrigger }}</span></a>
+
+{% include '@nfip-components/nfip-modal/nfip-modal.twig' with { 
+  'button_markup': 'link', 
+  modalHeadlingLevel: 'h2', 
+  modalHeadingClasses: 'nfip-tooltip__modal-heading' 
+} %}

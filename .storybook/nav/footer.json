@@ -1,0 +1,84 @@
+{
+  "address_line1": "FEMA | National Flood Insurance Program",
+  "street_address": "500 C St SW",
+  "locality": "Washington",
+  "region": "D.C.",
+  "postal_code": "20472",
+  "info": "Disaster Assistance:<br><a href=\"tel:8006213362\" aria-label=\"Disaster Assistance Telephone number: 800 621 3362\" class=\"tele-link\">(800) 621-FEMA</a>",
+  "tagline": "<span class=\"text-uppercase\">Floodsmart.gov</span><br><strong>An official website of the <a href=\"https://dhs.gov/\">U.S. Department of Homeland Security</a></strong>",
+  "footer_columns": [
+    {
+      "links": [
+        {
+          "label": "About Us",
+          "url": "#"
+        },
+        {
+          "label": "Accessibility",
+          "url": "#"
+        },
+        {
+          "label": "Contact Us",
+          "url": "/contact"
+        },
+        {
+          "label": "Glossary",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "links": [
+        {
+          "label": "FOIA Requests",
+          "url": "#"
+        },
+        {
+          "label": "Privacy Policy",
+          "url": "#"
+        },
+        {
+          "label": "Vulnerability Disclosure Policy",
+          "url": "#"
+        },
+        {
+          "label": "Plug-Ins",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "links": [
+        {
+          "label": "FEMA.gov",
+          "url": "#"
+        },
+        {
+          "label": "Ready.gov",
+          "url": "#"
+        },
+        {
+          "label": "DisasterAssistance.gov",
+          "url": "#"
+        },
+        {
+          "label": "USA.gov",
+          "url": "https://usa.gov/"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "secondary_section": {
+      "agency_name": "U.S. Department of Homeland Security - Federal Emergency Management Agency - National Flood Insurance Program",
+      "social_nav": [
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "YouTube",
+        "Linkedin",
+        "Mail"
+      ]
+    }
+  }
+}

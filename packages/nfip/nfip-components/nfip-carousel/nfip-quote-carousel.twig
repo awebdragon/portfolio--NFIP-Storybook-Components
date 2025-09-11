@@ -1,0 +1,21 @@
+{% set options = {
+  show_nav: show_nav
+}
+%}
+{% if nav_position %}
+{% set options = options|merge({ nav_position: nav_position}) %}
+{% endif %}
+{% embed '@nfip-components/nfip-section/nfip-section.twig' with { containerWidth: 'desktop-lg' } %}
+  {% block sectionContent %}
+  {% embed '@nfip-components/nfip-carousel/nfip-carousel.twig' with { options: options, carousel_aria_name: "Quote Carousel", nav_position: nav_position } %}
+    {% block carouselSlides %}
+      {% for quote in quotes %}
+        <div data-slide-number="{{ loop.index }}" tabindex="0" role="group" aria-roledescription="slide">
+        {% include '@nfip-components/nfip-quote/src/nfip-quote.twig' with quote %}
+        </div>
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
+
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,67 @@
+@use "uswds-core" as *;
+@use "../../../nfip-colors/src/styles" as *;
+@use "../../../styles/nfip-utility" as *;
+
+.nfip-footer {
+
+  .text-white {
+    a {
+      color: #fff;
+    }
+  }
+
+  .fema-links {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      ul {
+        padding-left: 1em;
+      }
+
+      summary {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        svg {
+          width: 1.56rem;
+          height: 1.56rem;
+        }
+      }
+    }
+
+    li {
+      margin: 1em 0;
+    }
+  }
+
+  .usa-footer__logo-img {
+    width: 15.63rem;
+    max-width: 100%;
+  }
+
+  .usa-footer__contact-heading {
+    a {
+      color: $theme-color-primary;
+    }
+  }
+
+  .nfip-footer-main{
+    color: #fff;
+
+    a{
+      color: $theme-color-base;
+
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.nfip-social {
+  gap: 1em;
+}

@@ -1,0 +1,19 @@
+// dependencies
+@use "usa-alert" as *;
+@use "../../../nfip-colors/src/styles" as *;
+@use "../../../styles/nfip-utility" as *;
+
+// fix for .usa-dark-background on alerts that aren't in a .grid-container (edge to edge)
+.usa-alert--emergency{
+  background-color: $theme-color-secondary;
+}
+
+// remove top margin
+.flsm-alert{
+  margin-top: 0;
+
+  .usa-alert__heading{
+    margin-top: .1rem;
+    color: $theme-color-base-darkest; // Make heading match icon color
+  }
+}

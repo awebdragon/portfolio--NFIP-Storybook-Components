@@ -1,0 +1,93 @@
+{% if card_style == "more-info" %}
+  {% set column_class = "desktop:grid-col" %}
+{% endif %}
+{% if vertical_align != 'top' %}
+  {% if vertical_align == 'center' %}
+    {% set vertical_align_class = 'v-center' %}
+  {% elseif vertical_align == 'bottom' %}
+    {% set vertical_align_class = 'v-bottom' %}
+  {% endif %}
+{% endif %}
+
+{% if heading_level == "none" %}
+  {% set tag = "p" %}
+{% endif %}
+
+<div class="grid-container">
+
+  <ul class="usa-card-group{% if card__group_class %} {{card__group_class}}{% endif %}">
+    {% for card in cards %}
+
+    {% if card.cta.button_inverse == true %}
+      {% set button_style = 'inverse' %}
+    {% else %}
+      {% set button_style = 'normal' %}
+    {% endif %}
+
+    <li class="usa-card {{ column_class|default('tablet:grid-col') }}{% if arrow_link %} flsm-card--arrow{% endif %}{% if card_style == "stats" %} flsm-stat-cards--card{% endif %}">
+      {% if card.full_card_link and card.cta is not empty %}<a href="{{card.cta.link}}">{% endif %}
+      <div class="usa-card__container {{ card.container_classes|default('') }}">
+
+        {% if card.full_card_link and card.cta is not empty %}
+        <div class="flsm-card--arrow__content">
+        {% endif %}
+        <div class="usa-card__header">
+          {% if card.eyebrow %}<p class="flsm-card__eyebrow nfip-card__eyebrow">{{ card.eyebrow }}</p>{% endif %}
+
+          <{{ heading_level|default('h3') }}  class="usa-card__heading">
+            {{ card.title }}{% if card.subhead %} <span>{{ card.subhead }}</span>{% endif %}
+          </{{ heading_level|default('h3') }} >
+        </div>
+
+        {% if card.media %}
+          {% set media = card.media %}
+
+          <div class="usa-card__media usa-card__media{% if media_inset %}--inset{% endif %} {% if media.media_classes %} {{ media.media_classes }}{% endif %}">
+            <div class="usa-card__img">
+              <img src="{{ media.image_src|default(image_fallback) }}" alt="{{ media.image_alt_text|default('A placeholder image') }}">
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="usa-card__body{% if card.body_overrides %} {{ card.body_overrides }}{% endif %}">
+          <p>
+            {{ card.content | raw }}
+          </p>
+        </div>
+        {% if card.full_card_link and card.cta is not empty %}
+        </div>
+        {% endif %}
+
+        {% if card.cta is not empty or card.tags is not empty %}
+        <div class="usa-card__footer">
+          {% if card.cta is not empty %}
+          {% include '@nfip-components/nfip-button/src/_button.twig' with {
+            'button_type': card.cta.button_type,
+            'button_markup': button_markup,
+            'button_text': card.cta.button_label,
+            'button_url': card.cta.link,
+            'button_target': '_self',
+            'button_style': button_style,
+            'button_alignment': card.cta.button_alignment,
+            'button_icon': card.cta.icon_id,
+            'button_aria_label': card.cta.aria_label
+          } %}
+          {% endif %}
+
+          {% if card.tags is not empty %}
+          <ul class="nfip-card__tag">
+            {% for tag in card.tags %}
+            <li><a href="#">{{tag}}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endif %}
+
+      </div>
+      {% if card.full_card_link and card.cta is not empty %}</a>{% endif %}
+    </li>
+
+    {% endfor %}
+  </ul>
+</div>  

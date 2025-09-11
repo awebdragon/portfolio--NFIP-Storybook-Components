@@ -1,0 +1,199 @@
+{% embed '@nfip-components/nfip-section/nfip-section.twig' with {
+  backgroundColor: 'white',
+  containerWidth: 'desktop',
+} %}
+
+  {% block sectionContent %}
+
+    {% embed "@nfip-components/nfip-tabs/nfip-tabs-horizontal.twig" with {
+          nfipTabsClasses: "tabs-default",
+          tabs_heading_level: "h4",
+          "nfipTabs": [
+            {
+              "title": "Flood Zone FAQs",
+              "tabcolor": "bg-transparent",
+              "content": "",
+              "cta": [ ]
+            },
+            {
+              "title": "Flood Map FAQs",
+              "tabcolor": "bg-transparent",
+              "content": ""
+            }
+          ]
+        } %}
+
+          {% block tab1Content %}
+
+            {% embed "@nfip-components/nfip-accordion/_accordion.twig" with {
+              'expand_first': false,
+              'multiselectable': false,
+              'accordions_heading_level': 'h5',
+              'extra_classes': 'padding-top-4',
+              'nfipAccordions': [
+                {
+                  'title': 'What is a flood zone?',
+                  'simpleContent': 'A flood zone is a defined geographic area with a specific flood hazard risk. It represents the probability and impact of flooding on that area and is used to determine insurance requirements and costs. Flood zones are shown collectively on a flood map. '
+                },
+                {
+                  'title': 'How does my flood zone affect my flood risk?',
+                  'simpleContent': 'Defining a flood zone involves estimating the probability and potential impact of flooding in that area. To do this, several factors are considered—flood frequency, distance to a water source, multiple flood types (e.g., river overflow, storm surge, coastal erosion, heavy rainfall, etc.) and property characteristics such as elevation and the cost to rebuild. The higher the flood risk in your area, the more likely flooding and damage will occur, and the higher your overall risk. '
+                },
+                {
+                  'title': 'How many flood zone types are there?',
+                  'simpleContent': '<p>There are five flood zones: low risk, moderate risk, high risk, coastal high risk, and undetermined risk. On a flood map, they are labeled as the following:</p>
+                  <ul>
+                    <li>Low Risk: B & X</li>
+                    <li>Moderate Risk: C & X </li>
+                    <li>High Risk: A</li>
+                    <li>Coastal High Risk: V, VE</li>
+                    <li>Undetermined Risk: D</li>
+                  </ul>'
+                },
+                {
+                  'title': 'What is Zone A?',
+                  'simpleContent': 'Zone A: Areas where there is a high risk of flooding. In communities participating in the NFIP, homeowners and businesses with federally backed mortgages must purchase flood insurance. '
+                },
+                {
+                  'title': 'What is Zone V?',
+                  'simpleContent': 'Zones V and VE are high risk coastal areas with an additional hazard from storm waves. These areas have a 26% chance of flooding over the life of a 30-year mortgage. In communities that participate in the NFIP, flood insurance is mandatory for federally backed mortgages. '
+                },
+                {
+                  'title': 'What is Zone D?',
+                  'simpleContent': 'Zone D: Areas where flood risk has not been determined and no flood hazard analysis has been conducted. Flood insurance rates are therefore proportionate to the uncertainty of the flood risk.'
+                },
+                {
+                  'title': 'What is Zone B & X?',
+                  'simpleContent': 'Zone B & X: Area of moderate flood hazard, usually between the limits of 100‐year and 500‐year floods. B Zones are also used to designate base floodplains of lesser hazards, such as areas protected by levees from 100‐year floods, or shallow flooding areas with average depths of less than 1 foot or drainage areas less than 1 square mile.'
+                },
+                {
+                  'title': 'What is Zone C & X?',
+                  'simpleContent': 'Zone C & X: Area of minimal flood hazard, usually depicted on Flood Insurance Rate Maps (FIRM) as above the 500‐year flood level. Zone C may have ponding and local drainage problems that don’t warrant a detailed study or designation as base floodplain. Zone X is the area determined to be outside the 500‐year flood limit and is protected by a levee from 100‐year floods.              '
+                },
+                {
+                  'title': 'I don’t live in a high-risk flood zone. Do I still need flood insurance?',
+                  'simpleContent': '<p>Yes. Every zone carries a flood risk; it’s just a matter of how big the risk is. Since your flood zone affects your individual flood risk and your insurance rates, check annually for updates. </p>
+                  <p>1 in 3 flood insurance claims comes from low- and moderate-risk zones. And “undetermined risk” doesn’t mean “no risk.” It means analysis has not yet been completed. Therefore, though not mandatory by law, insurance is strongly recommended for these zones, for a quick and subsidized recovery and to qualify for future risk claims.</p>'
+                },
+                {
+                  'title': 'Can I change my flood zone designation?',
+                  'simpleContent': 'Applicants may request a Letter of Map Amendment (LOMA) or Letter of Map Revision (LOMR) using <a href="https://hazards.fema.gov/femaportal/onlinelomc/signin">this online LOMC application</a>.'
+                },
+                {
+                  'title': 'I’m in a high-risk flood zone. Do I need flood insurance?',
+                  'simpleContent': 'High-risk flood areas, A or V on FEMA flood maps, face the highest risk of flooding. If you own a property in a high-risk zone and have a federally backed mortgage, you are <a href="/am-i-required-have-flood-insurance">required to purchase</a> flood insurance as a condition of that loan. If you don’t have a federally backed mortgage, getting flood insurance is still strongly recommended, due to the high risk. '
+                },
+                {
+                  'title': 'Why should I check for community flood map updates?',
+                  'simpleContent': 'When your community’s flood map is updated to reflect potential risks where you live, requirements for flood insurance coverage and the cost of your policy may change. Find out if your <a href="https://fema.maps.arcgis.com/apps/webappviewer/index.html?id=e7a7dc3ebd7f4ad39bb8e485bb64ce44">community\'s flood risk</a> has changed.'
+                },
+                {
+                  'title': 'My flood zone changed from high-risk to low-moderate risk. Do I still need insurance?',
+                  'simpleContent': 'Since 1 of every 3 claims comes from low-moderate risk zones, flood insurance is strongly recommended for your property. Your risk is reduced, but not removed. Contact your insurer to obtain a premium quote based on current risk.'
+                },
+                {
+                  'title': 'My flood zone changed from low-moderate risk to high-risk. What do I do?',
+                  'simpleContent': 'If your zone has changed from low-moderate risk to high risk, you may be required to have flood insurance if you have a <a href="/am-i-required-have-flood-insurance">government-backed mortgage</a>. If you are not required to have flood insurance, you should still get it to protect yourself from increased risk.'
+                },
+                {
+                  'title': 'If my flood zone has changed or is about to change to a higher-risk zone, what can I do to reduce my premium?',
+                  'simpleContent': '<p>If your area\'s flood zone is going to change to a higher risk classification, you should purchase or renew your policy now. When the new zone classification takes effect, your policy premiums cannot usually increase more than 18% per year, until the premium reaches the full risk rate. If you wait and purchase insurance after the rate change takes effect, your premium will be at the full risk rate for the higher-risk zone.</p>
+
+                  <p>If your zone changes to a Special Flood Hazard Area (SFHA), the NFIP offers a Newly Mapped discount for buildings located in an SFHA following a flood map update. You may be eligible for this discount if you purchase or renew a flood insurance policy within the first 12 months after the update. The rate will then increase by no more than 18% per year, until it reaches the full risk rate. </p>
+
+                  <p>There are other <a href="/how-can-i-pay-less">ways to save money</a>, including taking steps to reduce your property’s flood risk.</p>
+
+                  <p>Mitigation efforts, such as elevating a building on piles or installing proper flood openings in a crawlspace, will help to reduce flood damage and, potentially, the cost of flood insurance.</p>
+
+                  <p>To keep your lower rates, remember to renew your policy annually and stay protected.</p>
+                  '
+                },
+                {
+                  'title': 'I’m purchasing a home in a higher-risk flood zone. Is there any way I can save on my flood insurance premiums?',
+                  'simpleContent': '<p>If you are buying a home and moving to a higher-risk zone, you may be able to assume the prior owner\'s current NFIP policy. The policy may be pre-paid through its current policy term. In addition, if the policy rate is not at the full risk rate, the current policy rate cannot usually increase more than 18% a year, until it reaches the full risk rate. If you instead purchase a new policy, your premium would begin at the full risk rate, less any eligible discounts.</p>
+
+                  <p>You might also want to consider flood mitigation efforts, such as elevating building systems like heating/air conditioning or installing proper flood openings in a crawlspace. </p>
+                  '
+                },
+                {
+                  'title': 'What cost savings are available for my flood zone?',
+                  'simpleContent': 'To see if you are eligible for cost savings across all levels of flood insurance, contact your local insurance <a href="#">agent</a>.'
+                },
+                {
+                  'title': 'How should I build my home if I’m in a high flood zone?',
+                  'simpleContent': 'Information on building requirements in high-risk flood zones, such as foundation openings, floodproofing and breakaway walls, can be found in the NFIP <technical href="https://www.fema.gov/emergency-managers/risk-management/building-science/national-flood-insurance-technical-bulletins">technical bulletin</a>, updated annually. You should also talk to your Floodplain Manager as local regulations may be more stringent.'
+                },
+              ]
+            } %}
+            {% endembed %}
+
+          {% endblock %}
+
+          {% block tab2Content %}
+            
+          {% embed "@nfip-components/nfip-accordion/_accordion.twig" with {
+            'expand_first': false,
+            'multiselectable': false,
+            'accordions_heading_level': 'h5',
+            'extra_classes': 'padding-top-4',
+            'nfipAccordions': [
+              {
+                'title': 'What is a flood map?',
+                'simpleContent': 'Flood maps show a community’s risk of flooding. Specifically, flood maps show a community’s flood zone, floodplain boundaries and base flood elevation.'
+              },
+              {
+                'title': 'What is a flood map used for?',
+                'simpleContent': 'Flood maps are used by the NFIP and FEMA to assess mandatory purchase requirements, building code requirements and floodplain management requirements. Along with Flood Insurance Rate Maps (FIRMs), they also help communities understand their collective risk. Property owners, insurance agents and lenders can also use flood maps to <strong>determine flood insurance requirements</strong>.'
+              },
+              {
+                'title': 'How are flood maps related to flood zones and my overall flood risk?',
+                'simpleContent': '<p>Your flood map and flood zone affect your individual flood risk in two ways:</p>
+                
+                <ol>
+                  <li>They indicate the probability of flooding for your location based on historical data and other factors.</li>
+                  <li>They determine whether flood insurance is required for your property. For example, if you are in a high-risk zone, you are required to buy flood insurance if you have a federally backed mortgage.</li>
+                </ol>
+                
+                <p>Therefore, it is important to know your flood map and flood zone to understand and manage your flood risk. <a href="/all-about-flood-maps">You can find them online at the FEMA Flood Map Service Center</a> or by contacting your local floodplain administrator.</p>'
+              },
+              {
+                'title': 'How often are flood maps updated?',
+                'simpleContent': 'FEMA and the NFIP work with communities across the country to update the flood maps periodically. Check annually to make sure you are up to date with the latest risk assessment.'
+              },
+              {
+                'title': 'What would cause a flood map to get updated?',
+                'simpleContent': 'Flood hazards change over time. Updated flood maps provide a more accurate picture of a property’s flood risk. How water flows and drains can change due to new construction and community development or natural forces such as changing weather patterns or terrain changes. Also, communities may build levees and dams, decreasing flood risk over time.'
+              },
+              {
+                'title': 'Why is knowing where my property is on the flood map important?',
+                'simpleContent': 'Your home’s flood risk can change over time due to weather patterns, land development and erosion in your area. Reviewing your flood map helps you better understand your personal flood risk and insurance options.'
+              },
+              {
+                'title': 'Do flood maps play a significant role in rating my premium?',
+                'simpleContent': 'Due to the changes in the NFIP’s pricing approach, flood zones and the structure’s elevation relative to Base Flood Elevation (BFE) – as depicted on flood maps - are no longer the only factors utilized in setting flood insurance premiums.'
+              },
+              {
+                'title': 'My community is updating its flood map. Will it affect my flood risk?',
+                'simpleContent': 'If your community is in the process of updating its flood maps, the change will reflect increased or decreased flood risk. Checking the flood map will ensure you are doing your best to protect your home or business. Find out if your community has a flood map update underway and contact your Floodplain Manager for additional information.'
+              },
+              {
+                'title': 'Where can I learn about my community flood map?',
+                'simpleContent': 'To find your community flood map or check on updates, go to <a href="https://msc.fema.gov/portal/home">FEMA’s Map Service Center</a>.'
+              },
+              {
+                'title': 'Where can I learn more about flood maps?',
+                'simpleContent': 'To learn more about flood maps, such as how to read them, go to <a href="https://msc.fema.gov/portal/home">FEMA’s Map Service Center</a>.'
+              },
+            ]
+          } %}
+          {% endembed %}
+
+          {% endblock %}
+
+        {% endembed %}
+
+
+
+  {% endblock %}
+
+{% endembed %}

@@ -1,0 +1,36 @@
+{% 
+  set whiteText = [
+    "black",
+    "base-dark",
+    "base-darker",
+    "base-darkest",
+    "primary",
+    "primary-dark",
+    "primary-darker",
+    "secondary-light",
+    "secondary",
+    "secondary-dark",
+    "secondary-darker",
+    "accent-warm-dark",
+    "accent-warm-darker",
+    "accent-cool",
+    "accent-cool-dark",
+    "accent-cool-darker",
+    "nfip-violet",
+    "nfip-violet-30",
+    "nfip-violet-60",
+    "nfip-teal",
+    "nfip-teal-30",
+    "nfip-teal-60",
+    "nfip-orange-60",
+  ]
+%}
+
+
+{% set paddingClass = (paddingTop|default(8) == paddingBottom|default(8)) ? 'padding-y-' ~ paddingTop|default(8) : 'padding-top-' ~ paddingTop|default(8) ~ ' padding-bottom-' ~ paddingBottom|default(8) %}
+<section class="nfip-section padding-top-{{paddingTop|default(8)}} padding-bottom-{{paddingBottom|default(8)}} bg-{{backgroundColor|default('white')}} {% if backgroundColor|default('white') in whiteText %}text-white usa-dark-background{% else %}text-base-darkest{% endif %}{% if textAlign %} text-{{textAlign}}{% endif %}{% if extraClasses %} {{extraClasses}}{% endif %}">
+  <div class="grid-container width-full maxw-{{containerWidth|default("desktop")}}">
+    {% block sectionContent %}
+    {% endblock %}
+  </div>
+</section>

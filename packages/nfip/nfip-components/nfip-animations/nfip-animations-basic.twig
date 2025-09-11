@@ -1,0 +1,321 @@
+<div class="grid-container">
+  <h1>Animations - Basic</h1>
+
+  <p><strong>Please refresh the page one time.</strong></p>
+
+  <p>This page demonstrates the simplest animation components, where we can easily set a custom class or attribute name to call on the animation and apply it to just about any element, and none of the animations rely on a specific structure or another animation to successfully operate.</p>
+
+  <p>AOS was used for the vast majority of these animations. Tags are added to each animation to show what was used to build them, and the animation code and other notes have been included.</p>
+</div>
+
+<div class="grid-container margin-y-15 padding-y-15">
+  <p>This is a spacer so that you can scroll back up above the animations to see them repeat.</p>
+</div>
+
+{# <div class="grid-container padding-y-3">
+  <h2>Slide Right</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS</em></span>
+
+  <p>Example:</p>
+
+  <div class="width-card height-card bg-base" data-aos="slide-right" data-aos-easing="ease-out"></div>
+
+  <p>AOS attributes used:</p>
+
+  <ul>
+    <li>data-aos="slide-right"</li>
+    <li>data-aos-easing="ease-out"</li>
+  </ul>
+</div> #}
+
+{# <div class="grid-container padding-y-3">
+  <h2>Slide Left</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS</em></span>
+
+  <p>Example:</p>
+  
+  <div class="width-card height-card bg-base" data-aos="slide-left" data-aos-easing="ease-out"></div>
+
+  <p>AOS attributes used:</p>
+
+  <ul>
+    <li>data-aos="slide-left"</li>
+    <li>data-aos-easing="ease-out"</li>
+  </ul>
+</div> #}
+
+{# <div class="grid-container padding-y-3">
+  <h2>Slide Up</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS</em></span>
+
+  <p>Example:</p>
+  
+  <div class="width-card height-card bg-base" data-aos="slide-up" data-aos-easing="ease-out"></div>
+
+  <p>AOS attributes used:</p>
+
+  <ul>
+    <li>data-aos="slide-up"</li>
+    <li>data-aos-easing="ease-out"</li>
+  </ul>
+</div> #}
+
+{# <div class="grid-container padding-y-3">
+  <h2>Fade (Non-Directional)</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS</em></span>
+
+  <p>Example:</p>
+  
+  <div class="width-card height-card bg-base" data-aos="fade"></div>
+
+  <p>Example using multiple elements with different durations set:</p>
+
+  <div class="grid-row">
+    <div class="tablet:grid-col">
+      <div class="width-card height-card bg-base" data-aos="fade" data-aos-duration="1100"></div>
+
+      <p>AOS attributes used:</p>
+
+      <ul>
+        <li>data-aos="fade"</li>
+        <li>data-aos-duration="1100"</li>
+      </ul>
+    </div>
+    <div class="tablet:grid-col">
+      <div class="width-card height-card bg-base" data-aos="fade" data-aos-duration="400"></div>
+
+      <p>AOS attributes used:</p>
+
+      <ul>
+        <li>data-aos="fade"</li>
+        <li>data-aos-duration="400"</li>
+      </ul>
+    </div>
+    <div class="tablet:grid-col">
+      <div class="width-card height-card bg-base" data-aos="fade" data-aos-duration="700"></div>
+
+      <p>AOS attributes used:</p>
+
+      <ul>
+        <li>data-aos="fade"</li>
+        <li>data-aos-duration="700"</li>
+      </ul>
+    </div>
+  </div>
+</div> #}
+
+<div class="grid-container padding-y-3">
+  <h2>Zoom In Up Right Fixed</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS (Custom)</em></span>
+
+  <p>Applies a zoom to the element that makes it look like it's growing from the bottom left corner. Any additional element inside the animated element is set to fade in on a delay.</p>
+
+  <p>Example:</p>
+
+  <div class="width-card height-card bg-base" data-aos="zoom-in-up-right-fixed" data-aos-easing="ease-out"></div>
+
+  <div class="grid-col-4 bg-accent-cool-lightest margin-top-2 padding-2" data-aos="zoom-in-up-right-fixed" data-aos-easing="ease-out">
+    <h2>Sample Content</h2>
+    <p>All children should be put on a delay so that they only show up after the animated element has zoomed to full size.</p>
+    <ul>
+      <li>No matter what the element is or how many nested children there are.</li>
+    </ul>
+  </div>
+
+  <p>AOS attributes used:</p>
+
+  <ul>
+    <li>data-aos="zoom-in-up-right-fixed"</li>
+    <li>data-aos-easing="ease-out"</li>
+  </ul>
+
+  <p>Custom SCSS:</p>
+
+  <code>
+    <pre class="padding-y-2 bg-base-lightest">
+      /* zoom in up right fixed */
+      [data-aos="zoom-in-up-right-fixed"] {
+        transform: translate3d(-20%, 20%, 0) scale(.6);
+
+        >*{
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: .3s;
+          transition-delay: .3s;
+        }
+
+        &.aos-animate{
+          >*{
+            opacity: 1;
+          }
+        }
+      }</pre>
+  </code>
+</div>
+
+<div class="grid-container padding-y-3">
+  <h2>Zoom In Up Left Fixed</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS (Custom)</em></span>
+
+  <p>Applies a zoom to the element that makes it look like it's growing from the bottom right corner. Any additional element inside the animated element is set to fade in on a delay.</p>
+
+  <p>Example:</p>
+
+  <div class="width-card height-card bg-base" data-aos="zoom-in-up-left-fixed" data-aos-easing="ease-out"></div>
+
+  <div class="grid-col-4 bg-accent-cool-lightest margin-top-2 padding-2" data-aos="zoom-in-up-left-fixed" data-aos-easing="ease-out">
+    <h2>Sample Content</h2>
+    <p>All children should be put on a delay so that they only show up after the animated element has zoomed to full size.</p>
+    <ul>
+      <li>No matter what the element is or how many nested children there are.</li>
+    </ul>
+  </div>
+
+  <p>AOS attributes used:</p>
+
+  <ul>
+    <li>data-aos="zoom-in-up-left-fixed"</li>
+    <li>data-aos-easing="ease-out"</li>
+  </ul>
+
+  <p>Custom SCSS:</p>
+
+  <code>
+    <pre class="padding-y-2 bg-base-lightest">
+      /* zoom in up left fixed */
+      [data-aos="zoom-in-up-left-fixed"] {
+        transform: translate3d(20%, 20%, 0) scale(.6);
+
+        >*{
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: .3s;
+          transition-delay: .3s;
+        }
+
+        &.aos-animate{
+          >*{
+            opacity: 1;
+          }
+        }
+      }</pre>
+  </code>
+</div>
+
+<div class="grid-container padding-y-3">
+  <h2>Blur Out</h2>
+
+  <span class="usa-tag usa-tag--big"><em>AOS (Custom)</em></span>
+
+  <p>Goes from blurry state to 0 blur on scroll.</p>
+
+  <p>Example:</p>
+
+  <div class="width-card height-card bg-base" data-aos="blur-out" data-aos-easing="ease-out"></div>
+
+  <p>AOS attributes used:</p>
+
+  <ul>
+    <li>data-aos="blur-out"</li>
+    <li>data-aos-easing="ease-out"</li>
+  </ul>
+
+  <p>Custom SCSS:</p>
+
+  <code>
+    <pre class="padding-y-2 bg-base-lightest">
+      /* blur out */
+      [data-aos="blur-out"] {
+        filter: blur(.5rem);
+        transition-property: filter;
+
+        &.aos-animate{
+          filter: blur(0);
+        }
+      }</pre>
+  </code>
+</div>
+
+<div class="grid-container padding-y-3">
+  <h2>Number Counter</h2>
+
+  <span class="usa-tag usa-tag--big"><em>GSAP</em></span>
+
+  <p>Starts counting a number until it reaches the final result. For example, from 0 to 99. It allows for one decimal point to be used as well, which is optional just by including the decimal point when adding the value into the data-number attribute.</p>
+
+  <p>Example:</p>
+
+  <div class="grid-row padding-3 border-1px text-center">
+    <div class="tablet:grid-col">
+      <p><span class="flsm-gsap flsm-number-counter" data-number="27">0</span>%</p>
+    </div>
+    <div class="tablet:grid-col">
+      <p><span class="flsm-gsap flsm-number-counter" data-number="109000">0</span></p>
+    </div>
+    <div class="tablet:grid-col">
+      <p><span class="flsm-gsap flsm-number-counter" data-number="2.9">0</span> Million</p>
+    </div>
+  </div>
+
+  <p>Attributes needed:</p>
+
+  <ul>
+    <li>Class list:
+      <ul>
+        <li>flsm-gsap</li>
+        <li>flsm-number-counter</li>
+      </ul>
+    </li>
+    <li>Custom: data-number=""
+    </li>
+  </ul>
+
+  <p>HTML example code:</p>
+
+  <code>
+    <pre class="padding-y-2 bg-base-lightest"  style="overflow-x: auto;">
+      &lt;p&gt;&lt;span class=&quot;flsm-gsap flsm-number-counter&quot; data-number=&quot;27&quot;&gt;0&lt;/span&gt;%&lt;/p&gt;</pre>
+  </code>
+
+  <p>Custom JS:</p>
+
+  <code>
+    <pre class="padding-2 bg-base-lightest" style="white-space: pre-wrap; word-wrap: break-word;">// number counter
+function createNumberCounterAnimation(element){
+  let numberCounterTarget = { val: 0 };
+  const getNumberCounterValue = element.getAttribute('data-number');
+  const numberCounterFormat = (x) => {
+  if ( getNumberCounterValue && getNumberCounterValue.includes('.') ) {
+    const numberCounterParts = x.toFixed(1).split('.');
+    numberCounterParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return numberCounterParts.join('.');
+  } else {
+    const numberCounterParts = x.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    return numberCounterParts;
+  }
+}
+  const numberCounterAnimation = gsap.to( numberCounterTarget, {
+    duration: 3,
+    val: element.getAttribute('data-number'),
+    onUpdate: () => {
+      element.innerText = numberCounterFormat(
+        numberCounterTarget.val
+      );
+    },
+  });
+
+  ScrollTrigger.create({
+    trigger: element,
+    animation: numberCounterAnimation,
+  });
+};
+// end number counter</pre>
+  </code>
+</div>

@@ -1,0 +1,34 @@
+@use "../../../nfip-colors/src/styles" as *;
+@use "../../../styles/nfip-utility" as *;
+
+.nfip-primary-container {
+  @include nfip-container($theme-color-accent-cool-lightest, #000);
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+  .nfip-column-text {
+    order: 2;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .nfip-column-media {
+    order: 1;
+    text-align: center;
+  }
+}
+.nfip-column-media {
+  @include at-media(tablet) {
+    @include at-media-max(desktop) {
+      div {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        min-height: 80%;
+        object-fit: cover;
+      }
+    }
+  }
+}

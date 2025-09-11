@@ -1,0 +1,16 @@
+{% set headingSize = headingSize == "None" ? "" : headingSize %}
+{% set bodySize = bodySize == "None" ? "" : bodySize %}
+{% embed '@nfip-components/nfip-section/nfip-section.twig' %}
+  {% block sectionContent %}
+  <h2>Upcoming Events</h2>
+  {% include "@nfip-components/nfip-calendar-feed/nfip-calendar-feed.twig" %}
+  {% include '@nfip-components/nfip-button/src/_button.twig' with {
+    'button_type': 'outline',
+    'button_markup': 'link',
+    'button_text': 'See All Upcoming Events',
+    'button_url': '#',
+    'button_target': '_self',
+    'button_style': 'normal'
+  } %}
+  {% endblock %}
+{% endembed %}

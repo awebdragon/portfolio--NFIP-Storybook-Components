@@ -1,0 +1,12 @@
+{   
+    "header" : {
+        "title": "There's no such thing as no risk.",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "cta": {
+            "link": "#",
+            "link_target": "",
+            "button_label": "Learn more",
+            "button_inverse": false
+        }
+    }
+}

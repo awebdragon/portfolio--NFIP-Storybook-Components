@@ -1,0 +1,1 @@
+export { default as StatContent } from "./stat-card.json";

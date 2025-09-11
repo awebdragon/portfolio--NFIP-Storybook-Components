@@ -1,0 +1,17 @@
+<div class="find-your-risk">
+    <form>
+        <div>
+            <label class="usa-sr-only" for="zip">{{form_placeholder}}</label>
+            <input type="text" id="zip" placeholder="{{form_placeholder}}">
+        </div>
+        <div>
+            {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                'button_type': 'default',
+                'button_text': form_button_text,
+                'button_target': '_self',
+                'button_style': 'normal',
+                'button_markup': 'button'
+            } %}
+        </div>
+    </form>
+</div>

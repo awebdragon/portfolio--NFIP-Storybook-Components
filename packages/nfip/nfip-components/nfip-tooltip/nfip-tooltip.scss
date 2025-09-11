@@ -1,0 +1,53 @@
+// dependencies
+@use "usa-accordion" as *;
+@use "../../nfip-colors/src/styles" as *;
+@use "../../styles/nfip-utility" as *;
+
+%info-icon {
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/info.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+}
+
+button.nfip-tooltip{ // fixing unreadable tooltips on very small screen sizes
+  @include at-media("mobile"){
+    display: none;
+  }
+  @include at-media("mobile-lg"){
+    display: inline-flex;
+  }
+}
+
+.nfip-tooltip {
+  @extend %info-icon;
+
+  + .usa-tooltip__body {
+    width: 300px;
+    text-wrap: wrap;
+    white-space: normal;
+    padding: (24/16) * 1rem;
+    border-radius: 0;
+    background-color: $theme-color-primary-darker;
+
+    &:after {
+      top: calc(50% - .2rem);
+      border-right-color: $theme-color-primary-darker;
+    }
+  }
+
+  &__modal-heading {
+    display: flex;
+    align-items: center;
+    gap: (5/16) * 1rem;
+    &:before {
+      content: "";
+      transform: translateY((1/16) * 1rem);
+      @extend %info-icon;
+    }
+  }
+}

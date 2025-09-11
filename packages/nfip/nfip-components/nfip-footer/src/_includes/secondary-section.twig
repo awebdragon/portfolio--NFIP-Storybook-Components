@@ -1,0 +1,58 @@
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="usa-footer__logo grid-row mobile-lg:grid-col-5 mobile-lg:grid-gap-2">
+            <div class="mobile-lg:grid-col-auto">
+              <img class="usa-footer__logo-img" src="{{ img_path }}/nfip/footer_logo2.svg" alt="{{ footer.secondary_section.agency_name |e }}">
+            </div>
+            {# <div class="mobile-lg:grid-col-auto">
+              <p class="usa-footer__logo-heading">
+                {{ footer.secondary_section.agency_name |e }}
+              </p>
+            </div> #}
+          </div>
+          <div class="usa-footer__contact-links mobile-lg:grid-col-7">
+            {% include "@components/usa-footer/src/_includes/usa-social-nav.twig" %}
+            {% if footer.secondary_section.heading %}
+            <p class="usa-footer__contact-heading">
+              {{ footer.secondary_section.heading |e }}
+            </p>
+            {% endif %}
+            {# {% if footer.secondary_section.phone or footer.secondary_section.email %}
+            <address class="usa-footer__address">
+              <div class="usa-footer__contact-info grid-row grid-gap">
+                <div class="grid-col-auto">
+                  <a href="tel:1-800-555-5555">
+                    {{ footer.secondary_section.phone |e }}
+                  </a>
+                </div>
+                <div class="grid-col-auto">
+                  <a href="mailto:info@agency.gov">
+                    {{ footer.secondary_section.email |e }}
+                  </a>
+                </div>
+              </div>
+            </address>
+            {% endif %} #}
+
+            {# <div class="contact-link font-body-lg text-bold"><a href="/contact" class="survey-processed text-nfip-blue">Contact NFIP</a> </div> #}
+
+            <h2 class="usa-footer__contact-heading"><a href="/contact">Contact Floodsmart</a></h2>
+
+            <address class="usa-footer__address">
+              <div class="usa-footer__contact-info grid-row grid-gap">
+                <div class="grid-col-auto">
+                  <p class="margin-top-0">
+                    <span>{{address_line1}}</span><br>
+                    <span>{{street_address}}</span>, <span>{{locality}}</span>, <span>{{region}}</span> <span>{{postal_code}}</span>
+                  </p>
+                </div>
+                <div class="grid-col-auto">
+                  <p class="margin-top-0">{{ info }}</p>
+                </div>
+              </div>
+            </address>
+          </div>
+        </div>
+    </div>
+  </div>

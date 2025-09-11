@@ -1,0 +1,115 @@
+&.tabs-horizontal {
+
+    [role="tablist"] {
+        display: none;
+        text-align: center;
+
+        .nfip-tabs-tab-heading {
+            flex-grow: 1;
+            flex-basis: 0;
+            min-height: 3.9rem;
+            border: 0;
+            text-transform: uppercase;
+
+            &[aria-selected="true"] {
+                font-weight: 700;
+                text-decoration-line: underline;
+            }
+    
+            @include at-media("desktop") {
+                color: $theme-color-primary-darker;
+            }
+        }
+
+        h2,
+        h3,
+        h4,
+        h5{
+            flex-grow: 1;
+            flex-basis: 0;
+            min-height: 3.9rem;
+
+            .nfip-tabs-tab-heading{
+                background-color: transparent;
+            }
+        }
+        h2{
+            .nfip-tabs-tab-heading{
+                @include nfip-h2;
+            }
+        }
+        h3{
+            .nfip-tabs-tab-heading{
+                @include nfip-h3;
+            }
+        }
+        h4{
+            .nfip-tabs-tab-heading{
+                @include nfip-h4;
+            }
+        }
+        h5{
+            .nfip-tabs-tab-heading{
+                @include nfip-h5;
+            }
+        }
+
+    }
+
+    @include at-media("tablet") {
+        [role="tablist"] {
+            display: flex;
+        }
+    }
+}
+
+&.tabs-default{
+
+    [role="tablist"] {
+
+        [role="tab"]{
+            button{
+                &:hover{
+                    background-color: $theme-color-base-lightest;
+                }
+            }
+            &[aria-selected="false"]{
+                button{
+                    border-color: $theme-color-base-lighter;
+                    text-decoration: none;
+                }
+            }
+            &[aria-selected="true"]{
+                button{
+                    border-color: $theme-color-accent-cool;
+                    text-decoration: none;
+                }
+            }
+            &:hover,
+            &[aria-selected="true"]{
+                button{
+                    color: $theme-color-accent-cool;
+                }
+            }
+        }
+
+        .nfip-tabs-tab-heading {
+            width: 100%;
+            font-weight: bold;
+            border-bottom: 3px solid $theme-color-base-lighter;
+            color: $theme-color-primary-darker;
+
+            &:hover{
+                background-color: $theme-color-base-lightest;
+            }
+            &[aria-selected="true"]{
+                border-color: $theme-color-accent-cool;
+                text-decoration: none;
+            }
+            &:hover,
+            &[aria-selected="true"]{
+                color: $theme-color-accent-cool;
+            }
+        }
+    }
+}

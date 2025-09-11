@@ -1,0 +1,25 @@
+  <section>
+    <div class="waves-outer{% if flipped %} flipped{% endif %}">
+        <!--Waves Container-->
+        <div class="waves-inner">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 19 150 33" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,82,136,1)" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(122,165,193,0.8)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(214,233,242,1)" />
+            
+            </g>
+            </svg>
+            {% if not hidePause %}
+            <button class="waves-pause"><span>Pause</span></button>
+            {% endif %}
+        </div>
+        <!--Waves end-->
+        <!-- rgba(46,93,137,1) -->
+    </div>
+  </section>

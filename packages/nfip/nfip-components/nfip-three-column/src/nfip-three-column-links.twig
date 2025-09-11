@@ -1,0 +1,39 @@
+{% if cta_style.button_inverse == true %}
+  {% set button_style = 'inverse' %}
+{% else %}
+  {% set button_style = 'normal' %}
+{% endif %}
+
+<div class="grid-row grid-gap">
+    {% for column in threecolumnlinks %}
+    
+    <div class="{{ column.column_classes }}">
+        <div class="{{ column.row1_classes}}"> 
+            {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                'button_type': 'arrow',
+                'button_markup': 'link',
+                'button_text': column.cta_row1.button_label,
+                'button_url': column.cta_row1.link,
+                'button_target': '_self',
+                'button_style': button_style,
+                'button_icon': cta_style.button_icon,
+                'button_width': cta_style.button_width,
+            } %}
+        </div>
+        <div class="{{ column.row2_classes}}">
+            {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                'button_type': 'arrow',
+                'button_markup': 'link',
+                'button_text': column.cta_row2.button_label,
+                'button_url': column.cta_row2.link,
+                'button_target': '_self',
+                'button_style': button_style,
+                'button_icon': cta_style.button_icon,
+                'button_width': cta_style.button_width,
+            } %}
+        </div>
+    </div>
+    
+    {% endfor %}
+</div>
+

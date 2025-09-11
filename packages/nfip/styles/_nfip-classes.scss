@@ -1,0 +1,20 @@
+// source
+@forward "uswds-core";
+
+// dependencies
+@use "uswds-core" as *;
+@use "../../../packages/nfip/nfip-colors/src/styles" as *;
+
+.text {
+  @include color-modifiers;
+} // Example output class: .text-nfip-blue
+.bg {
+  @include background-color-modifiers;
+} // Example output class: .bg-nfip-blue
+.border {
+  @include border-color-modifiers;
+} // Example output class: .border-nfip-blue
+
+.maxw-55 {
+  max-width: 55rem;
+}

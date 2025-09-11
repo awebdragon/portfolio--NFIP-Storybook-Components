@@ -1,0 +1,36 @@
+{% if cta.button_inverse == true %}
+  {% set button_style = 'inverse' %}
+{% else %}
+  {% set button_style = 'normal' %}
+{% endif %}
+
+{% embed '@nfip-components/nfip-section/nfip-section.twig' with {
+  backgroundColor: backgroundColor,
+  containerWidth: 'desktop',
+  paddingTop: '0',
+  paddingBottom: '0',
+  extraClasses: ''
+} %}
+  {% block sectionContent %}
+    <div  class="grid-container maxw-desktop-lg">
+      <div class="grid-row grid-gap">
+          <div class="grid-col-12 padding-2 text-center">
+            {% if cta.title %}
+            <div class="margin-x-4 font-family-sans font-body-lg line-height-sans-2 margin-bottom-2 tablet:display-inline">{{ cta.title }}</div> 
+            {% endif %}
+            <div class="tablet:display-inline">
+              {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                'button_type': 'default',
+                'button_markup': 'link',
+                'button_text': cta.button_label,
+                'button_url': cta.link,
+                'button_target': '_self',
+                'button_id': cta.button_id,
+                'button_style': button_style,
+              } %}
+            </div>
+          </div>
+      </div>
+    </div>  
+  {% endblock %}
+{% endembed %}

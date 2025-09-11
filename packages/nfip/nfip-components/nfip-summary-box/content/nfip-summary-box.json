@@ -1,0 +1,9 @@
+{
+  "summary_tag": "Summary Highlight",
+  "summary_headline": "H2 Headline",
+  "summary_body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p><ul><li>If you are under a winter storm warning, find shelter right away.</li><li>Sign up for your community’s warning system.</li><li>Learn the signs of, and basic treatments for, <a href=\"#\">frostbite and hypothermia.</a></li><li>Gather emergency supplies for your home and your car.</li></ul>",
+  "summary_cta": {
+    "link_text": "Primary CTA",
+    "url": "http://www.google.com"
+  }
+}

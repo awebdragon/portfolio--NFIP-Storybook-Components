@@ -1,0 +1,44 @@
+@use "uswds-core" as *;
+
+@use "../../nfip-colors/src/styles" as *;
+
+body {
+  scroll-behavior: smooth;
+}
+
+a[name] {
+  scroll-margin-top: (120/16) * 1rem;
+}
+
+.nfip-jumplinks {
+  @include at-media(mobile-lg) {
+    columns: 2;
+    gap: 20px;
+  }
+
+  @include at-media(tablet) {
+    columns: 3;
+  }
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-weight: fw(semibold);
+  @include u-font-size(sans, 4);
+
+  li {
+    padding: 0 0 0 units(1);
+    border-left: (3/16) * 1rem solid $theme-color-accent-cool-lighter;
+    margin: 0 0 units(1) 0;
+    // break-after: avoid;
+  }
+  a {
+    color: $theme-color-accent-cool;
+    text-decoration-color: rgba($theme-color-accent-cool, 0);
+    text-decoration-thickness: 2px;
+    transition: all 0.3s;
+
+    &:hover {
+      text-decoration-color: $theme-color-accent-cool;
+    }
+  }
+}

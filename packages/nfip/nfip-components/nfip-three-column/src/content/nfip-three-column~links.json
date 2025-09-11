@@ -1,0 +1,54 @@
+{
+  "threecolumnlinks": [ 
+    {
+      "column_classes": "grid-col-12 desktop:grid-col-4 padding-x-4",
+      "row1_classes": "padding-top-1 border-bottom-2px padding-bottom-1",
+      "row2_classes": "padding-top-1 desktop:border-transparent desktop:border-bottom-2px border-bottom-2px padding-bottom-1",
+      "cta_row1": {
+        "link": "https://www.floodsmart.gov/whats-covered",
+        "link_target": "",
+        "button_label": "What does my policy cover"
+      },
+      "cta_row2": {
+        "link": "https://www.floodsmart.gov/how-do-i-start-my-flood-claim",
+        "link_target": "",
+        "button_label": "File a claim"
+      }
+    },
+    {
+      "column_classes": "grid-col-12 desktop:grid-col-4 padding-x-4",
+      "row1_classes": "padding-top-1 border-bottom-2px padding-bottom-1",
+      "row2_classes": "padding-top-1 desktop:border-transparent desktop:border-bottom-2px border-bottom-2px padding-bottom-1",
+      "cta_row1": {
+        "link": "https://www.floodsmart.gov/flood-map-zone",
+        "link_target": "",
+        "button_label": "Flood Zones &amp; Maps"
+      },
+      "cta_row2": {
+        "link": "#",
+        "link_target": "",
+        "button_label": "Community Mitigation"
+      }
+    },
+    {
+      "column_classes": "grid-col-12 desktop:grid-col-4 padding-x-4",
+      "row1_classes": "padding-top-1 border-bottom-2px padding-bottom-1",
+      "row2_classes": "padding-top-1 desktop:border-transparent desktop:border-bottom-2px border-bottom-2px padding-bottom-1",
+      "cta_row1": {
+        "link": "#",
+        "link_target": "",
+        "button_label": "Are you eligible?"
+      },
+      "cta_row2": {
+        "link": "#",
+        "link_target": "",
+        "button_label": "Discount tool"
+      }
+    }
+  ],
+  "cta_style": {
+    "button_width": "full-width",
+    "button_icon": "arrow_forward",
+    "button_inverse": false
+  }
+}

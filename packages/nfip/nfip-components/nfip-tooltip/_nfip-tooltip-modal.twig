@@ -1,0 +1,20 @@
+{% embed '@nfip-components/nfip-section/nfip-section.twig' %}
+  {% block sectionContent %}
+    <h2>Tooltips</h2>
+    <p class="intro">This is a demo of the Tooltip component. This version uses the USWDS Modal component, which is styled for NFIP. <span class="text-secondary">Be sure to refresh this page before clicking on the tooltip.</span></p>
+
+    <p>Vestibulum dapibus nunc ac augue. Sed in libero ut nibh placerat accumsan. Phasellus volutpat, metus eget egestas mollis, 
+    lacus lacus blandit dui, id egestas quam mauris ut lacus. Cras varius. Donec interdum, metus et hendrerit aliquet, dolor diam 
+    sagittis ligula, eget egestas libero turpis vel mi.
+    
+    {% include '@nfip-components/nfip-tooltip/nfip-tooltip-modal.twig' with {
+      tooltipTrigger: 'More Info',
+      tooltipAction: 'modal',
+      tooltipModal: id
+    } %}</p>
+    <p>Curabitur at lacus ac velit ornare lobortis. Donec mollis hendrerit risus.
+    Curabitur suscipit suscipit tellus. Vestibulum fringilla pede sit amet augue. Vestibulum fringilla pede sit amet augue.</p>
+
+    <p>Nullam cursus lacinia erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Quisque ut nisi. Phasellus viverra nulla ut metus varius laoreet. Pellentesque auctor neque nec urna.</p>
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,78 @@
+{% extends "@nfip-templates/_nfip-default.twig" %}
+{% block main %}
+{% include '@nfip-components/nfip-hero/nfip-hero.twig' %}
+
+{% include '@nfip-components/nfip-jumplinks/nfip-jumplinks.twig' %}
+{% set backgroundColor = 'white' %}
+{% embed '@nfip-components/nfip-richtext/nfip-richtext.twig' %}
+  {% block richText %}
+  {% set id = jumpLinks[0]|replace({' ': '-'})|replace({'/[^a-zA-Z0-9\-]/': ''})|lower %}
+  <a name="{{id}}" id="{{id}}"></a>
+  <h2>{{jumpLinks[0]}}</h2>
+  <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent nonummy mi in odio. Phasellus ullamcorper ipsum rutrum nunc. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Aliquam eu nunc.</p>
+  <p>Aenean ut eros et nisl sagittis vestibulum. Ut tincidunt tincidunt erat. Etiam imperdiet imperdiet orci. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Nam at tortor in tellus interdum sagittis.</p>
+  <p>Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi. Aliquam eu nunc. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Etiam feugiat lorem non metus. Suspendisse feugiat.</p>
+  <p>Donec posuere vulputate arcu. Curabitur suscipit suscipit tellus. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi nec metus.</p>
+  <p>Pellentesque posuere. Aenean viverra rhoncus pede. Duis vel nibh at velit scelerisque suscipit. Mauris sollicitudin fermentum libero. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna.</p>
+  {% endblock %}
+{% endembed %}
+
+{% set backgroundColor = 'base-lighter' %}
+{% embed '@nfip-components/nfip-richtext/nfip-richtext.twig' %}
+  {% block richText %}
+  {% set id = jumpLinks[1]|replace({' ': '-'})|replace({'/[^a-zA-Z0-9\-]/': ''})|lower %}
+  <a name="{{id}}" id="{{id}}"></a>
+  <h2>{{jumpLinks[1]}}</h2>
+    <p>Praesent blandit laoreet nibh. Vivamus in erat ut urna cursus vestibulum. Pellentesque ut neque. Phasellus accumsan cursus velit. Fusce fermentum odio nec arcu.</p>
+    <p>Aliquam lobortis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Vivamus aliquet elit ac nisl. In ut quam vitae odio lacinia tincidunt. Donec venenatis vulputate lorem.</p>
+    <p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Nam pretium turpis et arcu. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Aenean imperdiet. Nam commodo suscipit quam.</p>
+    <p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Proin faucibus arcu quis ante. Ut id nisl quis enim dignissim sagittis. Fusce vulputate eleifend sapien. Maecenas egestas arcu quis ligula mattis placerat.</p>
+    <p>Cras non dolor. Aliquam lobortis. Fusce a quam. Praesent blandit laoreet nibh. Nullam vel sem.</p>
+  {% endblock %}
+{% endembed %}
+
+{% set backgroundColor = 'white' %}
+{% embed '@nfip-components/nfip-richtext/nfip-richtext.twig' %}
+  {% block richText %}
+  {% set id = jumpLinks[2]|replace({' ': '-'})|replace({'/[^a-zA-Z0-9\-]/': ''})|lower %}
+  <a name="{{id}}" id="{{id}}"></a>
+  <h2>{{jumpLinks[2]}}</h2>
+  <p>Aenean viverra rhoncus pede. Maecenas malesuada. Praesent adipiscing. Suspendisse potenti. Praesent nec nisl a purus blandit viverra.</p>
+  <p>Ut tincidunt tincidunt erat. Aenean imperdiet. Fusce vel dui. Mauris sollicitudin fermentum libero. Phasellus magna.</p>
+  <p>Maecenas egestas arcu quis ligula mattis placerat. Nam adipiscing. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Fusce convallis metus id felis luctus adipiscing. Maecenas vestibulum mollis diam.</p>
+  <p>Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. In hac habitasse platea dictumst. Aliquam erat volutpat. Praesent nonummy mi in odio.</p>
+  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Praesent congue erat at massa. Proin faucibus arcu quis ante. Nam commodo suscipit quam. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
+  {% endblock %}
+{% endembed %}
+
+{% set backgroundColor = 'primary-dark' %}
+{% embed '@nfip-components/nfip-richtext/nfip-richtext.twig' %}
+  {% block richText %}
+  {% set id = jumpLinks[3]|replace({' ': '-'})|replace({'/[^a-zA-Z0-9\-]/': ''})|lower %}
+  <a name="{{id}}" id="{{id}}"></a>
+  <h2>{{jumpLinks[3]}}</h2>
+  <p>Suspendisse feugiat. Curabitur blandit mollis lacus. Vestibulum ullamcorper mauris at ligula. Donec posuere vulputate arcu. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc.</p>
+  <p>Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Duis leo. Curabitur at lacus ac velit ornare lobortis. Aenean vulputate eleifend tellus. Aenean viverra rhoncus pede.</p>
+  <p>Ut leo. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Sed hendrerit. Suspendisse eu ligula. Quisque rutrum.</p>
+  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Morbi mollis tellus ac sapien. Phasellus tempus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+  <p>Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Fusce fermentum odio nec arcu. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Cras id dui.</p>
+  {% endblock %}
+{% endembed %}
+
+{% set backgroundColor = 'white' %}
+{% embed '@nfip-components/nfip-richtext/nfip-richtext.twig' %}
+  {% block richText %}
+  {% set id = jumpLinks[4]|replace({' ': '-'})|replace({'/[^a-zA-Z0-9\-]/': ''})|lower %}
+  <a name="{{id}}" id="{{id}}"></a>
+  <h2>{{jumpLinks[4]}}</h2>
+  Phasellus gravida semper nisi. Vestibulum fringilla pede sit amet augue. In hac habitasse platea dictumst. Maecenas nec odio et ante tincidunt tempus. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla.</p>
+  <p>Nunc nonummy metus. Curabitur nisi. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Curabitur blandit mollis lacus. Praesent egestas neque eu enim.</p>
+  <p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Aenean viverra rhoncus pede. Quisque id mi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p>
+  <p>Phasellus dolor. Aenean ut eros et nisl sagittis vestibulum. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vivamus euismod mauris. Quisque ut nisi.</p>
+  <p>Ut tincidunt tincidunt erat. Praesent ac massa at ligula laoreet iaculis. Vivamus in erat ut urna cursus vestibulum. Fusce a quam. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus.</p>
+  {% endblock %}
+{% endembed %}
+
+
+
+{% endblock %}

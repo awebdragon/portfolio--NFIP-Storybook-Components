@@ -1,0 +1,53 @@
+{% if header.primary_cta.button_inverse == true %}
+    {% set button_1_style = 'inverse' %}
+{% else %}
+    {% set button_1_style = 'normal' %}
+{% endif %}
+
+{% if header.secondary_cta.button_inverse == true %}
+    {% set button_2_style = 'inverse' %}
+{% else %}
+    {% set button_2_style = 'normal' %}
+{% endif %}
+
+<section class="nfip-homepage-hero usa-dark-background" style="background-image: url('{{ header.background_image }}'); background-position: {{ header.background_position }};">
+    {# padding-y-8 #}
+    <div class="nfip-homepage-hero--gradient {{ header.gradient_classes }}">
+        <div class="grid-container {{ header.container_classes }} {{ header.container_width|default('maxw-desktop') }}">
+            <div class="grid-row">
+                <div class="{{ header.container_col_size }} text-white">
+                    <h1>{{ header.title }}</h1>
+
+                    {% if ( (header.text) or (header.primary_cta.link) ) %}
+                        {% if header.text %}<p>{{ header.text }}</p>{% endif %}
+
+                        {% if header.primary_cta.link %}
+                            <div>
+                                {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                                    'button_type': 'outline',
+                                    'button_markup': 'link',
+                                    'button_text': header.primary_cta.button_label,
+                                    'button_url': header.primary_cta.link,
+                                    'button_target': '_self',
+                                    'button_style': button_1_style,
+                                } %}
+                            </div>
+                        {% endif %}
+                        {% if header.secondary_cta.link %}
+                            <div class="margin-top-1">
+                                {% include '@nfip-components/nfip-button/src/_button.twig' with {
+                                    'button_type': 'outline',
+                                    'button_markup': 'link',
+                                    'button_text': header.secondary_cta.button_label,
+                                    'button_url': header.secondary_cta.link,
+                                    'button_target': '_self',
+                                    'button_style': button_2_style,
+                                } %}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,22 @@
+{
+  "search": false,
+  "items": [
+    {
+      "label": "Sign Up for Updates",
+      "href": "javascript:void(0);"
+    },
+    {
+      "label": "Find a Provider",
+      "href": "javascript:void(0);",
+      "current": true
+    },
+    {
+      "label": "Resource Library",
+      "href": "javascript:void(0);"
+    },
+    {
+      "label": "FloodSmart for Agents",
+      "href": "javascript:void(0);"
+    }
+  ]
+}

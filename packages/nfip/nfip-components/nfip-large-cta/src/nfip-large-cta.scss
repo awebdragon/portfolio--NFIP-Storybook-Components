@@ -1,0 +1,6 @@
+@use "../../../nfip-colors/src/styles" as *;
+@use "../../../styles/nfip-utility" as *;
+
+.nfip-large-cta {
+  color: $theme-color-primary-darker;
+}

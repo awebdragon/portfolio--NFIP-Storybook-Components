@@ -1,0 +1,76 @@
+@use "../../../../nfip-colors/src/styles" as *;
+@use "../../../../styles/nfip-utility" as *;
+
+.flsm-video-bg{
+  position: relative;
+  overflow: hidden;
+
+  video.flsm-video-bg-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the video */
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Puts the video behind other content */
+  }
+
+  &.usa-dark-background{
+    background: transparent; /* resets usa-dark-background to only affect the content color if no overlay is selected */
+  }
+  &.--dark{
+    background: rgba($theme-color-primary-dark, .685);
+
+    .flsm-video-bg-container{
+      background: $theme-color-primary-darker;
+    }
+  }
+  &.--light{
+    background: rgba(255, 255, 255, .45);
+
+    .flsm-video-bg-container{
+      background: $theme-color-base;
+    }
+  }
+}
+
+button.video-bg-pause,
+button.flsm-parallax--slide-up-bottom--pause{
+  position: absolute;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg id='p' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30'%3E%3Cdefs%3E%3Cstyle%3E.p%7Bfill:%23193c5c%3Bstroke-width:0px%3B%7D%3C/style%3E%3C/defs%3E%3Cpath class='p' d='M8 30H0V0h8v30ZM22 0h-8v30h8V0Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 12px;
+  z-index: 100;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &.paused{
+    background-image: url("data:image/svg+xml,%3Csvg id='pl' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.1667 12.5'%3E%3Cdefs%3E%3Cstyle%3E.pl%7Bfill:%23193c5c%3Bstroke-width:0px%3B%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='pl' points='0 0 9.1667 6.25 0 12.5 0 0'/%3E%3C/svg%3E");
+  }
+
+  span{
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
+}
+button.video-bg-pause{
+  top: 20px;
+}
+button.flsm-parallax--slide-up-bottom--pause{
+  bottom: 20px;
+}

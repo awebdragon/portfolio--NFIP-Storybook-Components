@@ -1,0 +1,57 @@
+{
+  "media_inset": true,
+  "arrow_link": true,
+  "cards": [
+    {
+      "title": "Protect Yourself Today",
+      "container_classes": "",
+      "media": false,
+      "body_overrides": "",
+      "content": "Contact your insurance agent today to find ways to lower your costs.",
+      "cta": {
+        "link": "http://www.google.com",
+        "link_target": "",
+        "button_label": "Read More",
+        "button_type": "arrow",
+        "button_inverse": false,
+        "button_alignment": "left",
+        "aria_label": "Read More About how to Protect Yourself Today"
+      },
+      "full_card_link": true
+    },
+    {
+      "title": "Flood Maps and Zones",
+      "container_classes": "",
+      "media": false,
+      "body_overrides": "",
+      "content": "Read more about flood maps, flood zones and get  questions answered.",
+      "cta": {
+        "link": "http://www.google.com",
+        "link_target": "",
+        "button_label": "Read More",
+        "button_type": "arrow",
+        "button_inverse": false,
+        "button_alignment": "left",
+        "aria_label": "Read More About Flood Maps and Zones"
+      },
+      "full_card_link": true
+    },
+    {
+      "title": "Use Discount Tool",
+      "container_classes": "",
+      "media": false,
+      "body_overrides": "",
+      "content": "Access our Discount Tool and see how much money you can save.",
+      "cta": {
+        "link": "http://www.google.com",
+        "link_target": "",
+        "button_label": "Read More",
+        "button_type": "arrow",
+        "button_inverse": false,
+        "button_alignment": "left",
+        "aria_label": "Read More About the Discount Tool"
+      },
+      "full_card_link": true
+    }
+  ]
+}
