@@ -1,6 +1,0 @@
-@use "../../nfip-colors/src/styles" as *;
-@use "../../styles/nfip-utility" as *;
-
-.nfip-secondary-container {
-  @include nfip-container($theme-color-secondary, #fff);
-}

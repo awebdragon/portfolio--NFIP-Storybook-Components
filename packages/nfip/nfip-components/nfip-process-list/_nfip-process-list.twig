@@ -1,8 +1,0 @@
-{% set headingSize = headingSize == "None" ? "" : headingSize %}
-{% set bodySize = bodySize == "None" ? "" : bodySize %}
-{% embed '@nfip-components/nfip-section/nfip-section.twig' %}
-  {% block sectionContent %}
-  <h2>H2 Process List</h2>
-  {% include "@nfip-components/nfip-process-list/nfip-process-list.twig" %}
-  {% endblock %}
-{% endembed %}
