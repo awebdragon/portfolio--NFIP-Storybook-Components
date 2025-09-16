@@ -78,7 +78,7 @@
     "build:storybook": "build-storybook -o _site",
     "storybook-deploy": "storybook-to-ghpages -o _site",
     "build:html": "webpack build --config ./webpack.twig.config.js && npm run prettier:html",
-    "deploy-storybook": "gh-pages -d _site",
+    "deploy-storybook": "gh-pages -d _manual-dist",
     "deploy": "npm run build && git push && npm run storybook-deploy"
   },
   "repository": {

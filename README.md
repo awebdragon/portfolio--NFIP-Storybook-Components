@@ -1,3 +1,18 @@
+IMPORTANT: you can view a full page mode by clicking the box-arrow icon in the top right that says "open canvas in new window". Some elements may not render correctly until the page is refreshed, so please refresh the page once after you open it.
+
+Front end: https://awebdragon.github.io/portfolio--NFIP-Storybook-Components/?path=/story/nfip-design-tokens-colors--colors
+
+For the purposes of this portfolio, I created most, but not all, the redesigned components that are based on the USWDS components. Here are some highlights I can take full credit for and would want to show off:
+- Animations (GSAP and AOS)
+  - Landing page & instructions for how to make the GSAP animations reusable components instead of bound to the order the elements appear on the page: https://awebdragon.github.io/portfolio--NFIP-Storybook-Components/iframe.html?args=&id=nfip-components-animations--animations-landing-page&viewMode=story 
+  - Simpler custom AOS and mini GSAP animations for use on block elements: https://awebdragon.github.io/portfolio--NFIP-Storybook-Components/iframe.html?args=&id=nfip-components-animations--basic-animations&viewMode=story 
+  - Section and Parallax animations: https://awebdragon.github.io/portfolio--NFIP-Storybook-Components/iframe.html?args=&id=nfip-components-animations--section-animations&viewMode=story 
+  - Mock up landing page showcasing how these animations could be used in a campaign: https://awebdragon.github.io/portfolio--NFIP-Storybook-Components/iframe.html?args=&id=nfip-pages-animated-campaign-mockups--mockup-one&viewMode=story
+
+But please do feel free to poke around anywhere else. Anything labelled NFIP was something I worked on as part of the redesign project. The USWDS stuff farther down is just standard defaults of the USWDS system.
+
+Old repo readme (pretty much just clones USWDS'):
+=======================
 # United States Web Design System
 
 [![CircleCI Build Status](https://img.shields.io/circleci/build/gh/uswds/uswds/develop?style=for-the-badge&logo=circleci)](https://circleci.com/gh/uswds/uswds/tree/develop) ![Snyk vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@uswds/uswds?style=for-the-badge) [![npm Version](https://img.shields.io/npm/v/@uswds/uswds?style=for-the-badge)](https://www.npmjs.com/package/uswds) [![npm Downloads](https://img.shields.io/npm/dt/@uswds/uswds?style=for-the-badge)](https://www.npmjs.com/package/uswds) [![GitHub issues](https://img.shields.io/github/issues/uswds/uswds?style=for-the-badge&logo=github)](https://github.com/uswds/uswds/issues) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?style=for-the-badge)](https://github.com/prettier/prettier)
