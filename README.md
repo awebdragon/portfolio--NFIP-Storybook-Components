@@ -1,4 +1,4 @@
-IMPORTANT: you can view a full page mode by clicking the box-arrow icon in the top right that says "open canvas in new window". Some elements may not render correctly until the page is refreshed, so please refresh the page once after you open it.
+IMPORTANT: you can view a full page mode by clicking the box-arrow icon in the top right with the hover-tooltip that says "open canvas in new window". Some elements may not render correctly until the page is refreshed, so please refresh the page once after you open it.
 
 Front end: https://awebdragon.github.io/portfolio--NFIP-Storybook-Components/?path=/story/nfip-design-tokens-colors--colors
 
