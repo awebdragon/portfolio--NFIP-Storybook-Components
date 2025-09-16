@@ -1,14 +1,3 @@
-This repo was forked from USWDS Design Systems so we could develop on Storybook with the design system for handoff to the Drupal developers over at NFIP. Much of the work is mine, but some was based on team effort.
-
-The old repo used github pages to view the front end: https://yesandagency.github.io/nfip-uswds/?path=/story/nfip-design-tokens-colors--colors
-
-This isn't set up on my clone of the repo yet, but I'd like to someday, on the chance that the old repo disappears.
-
-
-Repo info:
-
-===============================
-
 # United States Web Design System
 
 [![CircleCI Build Status](https://img.shields.io/circleci/build/gh/uswds/uswds/develop?style=for-the-badge&logo=circleci)](https://circleci.com/gh/uswds/uswds/tree/develop) ![Snyk vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@uswds/uswds?style=for-the-badge) [![npm Version](https://img.shields.io/npm/v/@uswds/uswds?style=for-the-badge)](https://www.npmjs.com/package/uswds) [![npm Downloads](https://img.shields.io/npm/dt/@uswds/uswds?style=for-the-badge)](https://www.npmjs.com/package/uswds) [![GitHub issues](https://img.shields.io/github/issues/uswds/uswds?style=for-the-badge&logo=github)](https://github.com/uswds/uswds/issues) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?style=for-the-badge)](https://github.com/prettier/prettier)
